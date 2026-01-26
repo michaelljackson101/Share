@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    @page { size: 16in 9in; margin: 0.45in; }
+
+    :root {
+      --accent: #A100FF;
+      --text: #111827;
+      --muted: #4b5563;
+      --rule: #e5e7eb;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      margin: 0;
+    }
+
+    h1, h2, h3 { margin: 0; }
+
+    .page {
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 0.6rem;
+      padding: 0.15in 0.25in;
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .header-left {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 0.6rem;
+    }
+
+    .header-logo {
+      height: 26px;
+      width: auto;
+      opacity: 0.92;
+      object-fit: contain;
+      align-self: start;
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.05;
+    }
+
+    .headline {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 0.15rem;
+    }
+
+    .meta {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.35;
+    }
+
+    .meta a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .summary {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.25;
+      margin: 0.25rem 0 0.45rem 0;
+    }
+
+    .top {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 0.7rem;
+    }
+
+    .card {
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 0.55rem 0.6rem;
+    }
+
+    .card.accented {
+      border-top: 3px solid var(--accent);
+    }
+
+    .card h3 {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1rem;
+    }
+
+    li {
+      font-size: 12px;
+      line-height: 1.25;
+      margin: 0.15rem 0;
+    }
+
+    .strengths {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.45rem 0.7rem;
+    }
+
+    .bucket-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.15rem;
+    }
+
+    .bucket-items {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.25;
+    }
+
+    .wins {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .wins td {
+      border-top: 1px solid var(--rule);
+      padding: 0.35rem 0;
+      vertical-align: top;
+    }
+
+    .wins tr:first-child td { border-top: none; }
+
+    .win-title {
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .win-impact {
+      font-size: 11.5px;
+      color: var(--muted);
+      margin: 0.1rem 0 0 0;
+      line-height: 1.25;
+    }
+
+    .exp-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      --exp-col-role: 25%;
+      --exp-col-client: 22%;
+      --exp-col-dates: 8%;
+      --exp-col-impact: 45%;
+    }
+
+    .exp-table col.col-role { width: var(--exp-col-role); }
+    .exp-table col.col-client { width: var(--exp-col-client); }
+    .exp-table col.col-dates { width: var(--exp-col-dates); }
+    .exp-table col.col-impact { width: var(--exp-col-impact); }
+
+    .exp-table th {
+      text-align: left;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 0 0 0.25rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .exp-table td {
+      font-size: 11.5px;
+      padding: 0.3rem 0;
+      vertical-align: top;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .role {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .client {
+      color: var(--muted);
+    }
+
+    .dates {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .impact {
+      color: var(--text);
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.7rem;
+      border-top: 1px solid var(--rule);
+      padding-top: 0.35rem;
+    }
+
+    .footer .label {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-weight: 800;
+      margin-bottom: 0.15rem;
+    }
+
+    .footer .value {
+      font-size: 11.5px;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .build-footer {
+      position: fixed;
+      right: 0.45in;
+      bottom: 0.2in;
+      font-size: 10px;
+      color: var(--muted);
+      text-align: right;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.05rem 0.25rem;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <div class="header">
+    <div class="header-left">
+      <div>
+        <div class="name">Michael Jackson</div>
+        <div class="headline">AI LLM Technology Architecture — Associate Director</div>
+      </div>
+      
+      <img class="header-logo" src="images/accenture_logo_sm.png" alt="" />
+      
+    </div>
+    <div class="meta">
+      <div>Greater Boston, MA</div>
+      <div><a href="mailto:michael.l.jackson@afs.com">michael.l.jackson@afs.com</a></div>
+      <div><a href="tel:+1 617-286-2684">+1 617-286-2684</a></div>
+      <div>Federal AI Transformation & Governance Leader</div>
+    </div>
+  </div>
+
+  <div class="top">
+    <div class="card accented">
+      <h3>Executive Summary</h3>
+      <div class="summary">Associate Director focused on AI/LLM technology architecture and enterprise adoption—bringing governance, operating model design, and delivery execution together to turn generative AI into an auditable, repeatable capability. Led AI strategy and automation initiatives for a major DoD program, including an AI strategic plan aligned to NIST AI RMF, TRACE methodology for governed AI-assisted content production, and a TILETS enablement model that achieved >60% workforce AI literacy. Known for translating emerging AI capabilities into secure, practical workflows that improve delivery speed and communication quality.
+</div>
+      <ul>
+        
+        <li>Led AI strategy and governed adoption for mission-critical public-sector programs; delivered measurable productivity gains</li>
+        
+        <li>Designed human-in-the-loop AI operating models aligned to NIST AI RMF, auditability, and delivery execution</li>
+        
+        <li>Combined disciplined program leadership with practical automation to accelerate outcomes and strengthen stakeholder trust</li>
+        
+      </ul>
+
+      <div style="height: 0.45rem;"></div>
+
+      <h3>Core Strengths</h3>
+      <div class="strengths">
+        
+        <div>
+          <div class="bucket-title">AI/LLM</div>
+          <div class="bucket-items">AI Program Governance, AI Operating Model Design, AI Risk And Compliance, Human In The Loop Systems</div>
+        </div>
+        
+        <div>
+          <div class="bucket-title">Delivery</div>
+          <div class="bucket-items">Complex Program Delivery, Governance And Controls, Vendor Management, Metrics And Outcomes Management</div>
+        </div>
+        
+        <div>
+          <div class="bucket-title">Domains</div>
+          <div class="bucket-items">Defense, Public Sector, Healthcare Payer, Contact Center</div>
+        </div>
+        
+        <div>
+          <div class="bucket-title">Tools</div>
+          <div class="bucket-items">Windsurf, LLM Prompting, Jira, Confluence</div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="card accented">
+      <h3>Signature Proof</h3>
+      <table class="wins">
+        <tbody>
+          
+          <tr>
+            <td>
+              <div class="win-title">Established AI Operating Model for USAF Human Capital Program</div>
+              <div class="win-impact">Authored AI Strategic Plan ("Sharpen the Axe") with a Crawl–Walk–Run maturity model aligned to NIST AI RMF</div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="win-title">Designed Intent Foundry v1.1 for AI-Assisted Knowledge Work</div>
+              <div class="win-impact">Designed and implemented a reusable system that transforms human intent into tempered, traceable, execution-ready artifacts through staged human–AI collaboration</div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="win-title">Delivery Governance for State Human Services Case Management</div>
+              <div class="win-impact">Maintained delivery alignment across scope, resourcing, risks, and milestones through structured governance</div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="win-title">Scaled Contact Center Operations and Implemented Salesforce</div>
+              <div class="win-impact">Scaled fixed-price operations to 300+ personnel while maintaining service continuity through vendor transition</div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Selected Experience</h3>
+    <table class="exp-table">
+      <colgroup>
+        <col class="col-role" />
+        <col class="col-client" />
+        <col class="col-dates" />
+        <col class="col-impact" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Client / Context</th>
+          <th>Dates</th>
+          <th>Impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            <div class="role">AI and Innovation Lead — Accenture</div>
+          </td>
+          <td class="client">
+            U.S. Air Force Human Capital Modernization Program
+          </td>
+          <td class="dates">Oct 25–Present</td>
+          <td class="impact" title="Authored AFIPPS AI Strategic Plan ("Sharpen the Axe") with a Crawl–Walk–Run maturity model aligned to NIST AI RMF">Authored AFIPPS AI Strategic Plan ("Sharpen the Axe") with a Crawl–Walk–Run maturity model aligned to NIST AI RMF</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">AI Learning & Experimentation (Parallel Track) — Accenture</div>
+          </td>
+          <td class="client">
+            Self-Directed AI Learning and Experimentation
+          </td>
+          <td class="dates">Oct 25–Present</td>
+          <td class="impact" title="Maintained a daily AI learning and experimentation cadence across techniques, advances, and practical application patterns">Maintained a daily AI learning and experimentation cadence across techniques, advances, and practical application patterns</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">AI Practitioner (Internal Assignment) — Accenture</div>
+          </td>
+          <td class="client">
+            Internal (Accenture)
+          </td>
+          <td class="dates">Jun 26–Sep 26</td>
+          <td class="impact" title="Completed AI Practitioner upskilling and earned Accenture Certified Delivery Professional (CDP) certification">Completed AI Practitioner upskilling and earned Accenture Certified Delivery Professional (CDP) certification</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">Program Delivery Lead — Accenture</div>
+          </td>
+          <td class="client">
+            State Human Services Agency
+          </td>
+          <td class="dates">Oct 22–May 25</td>
+          <td class="impact" title="Owned project management controls and tooling, maintaining detailed plans, estimates, and progress tracking to enable effective leadership oversight">Owned project management controls and tooling, maintaining detailed plans, estimates, and progress tracking to enable effective leadership oversight</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">Service Delivery Lead — Accenture</div>
+          </td>
+          <td class="client">
+            State Health Insurance Marketplace
+          </td>
+          <td class="dates">May 22–Jan 23</td>
+          <td class="impact" title="Owned fixed-price service delivery and day-to-day operations for a contact center organization scaled to 300+ personnel">Owned fixed-price service delivery and day-to-day operations for a contact center organization scaled to 300+ personnel</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">Delivery Lead — Accenture</div>
+          </td>
+          <td class="client">
+            State Health & Human Services Agency
+          </td>
+          <td class="dates">Jan 22–Jun 22</td>
+          <td class="impact" title="Led a six-month assessment to remediate third-party vendor performance issues for a statewide program">Led a six-month assessment to remediate third-party vendor performance issues for a statewide program</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="label">Education</div>
+      <div class="value">
+        
+        <div>United States Military Academy at West Point — B.S., Engineering, Computer Science</div>
+        
+        <div>Bowie State University (University of Maryland European Division) — M.S., Management Information Systems</div>
+        
+      </div>
+    </div>
+    <div>
+      <div class="label">Certifications</div>
+      <div class="value">
+        
+        <div>Certified Delivery Professional — Accenture (2025)</div>
+        
+      </div>
+    </div>
+    <div>
+      <div class="label">Selected Training</div>
+      <div class="value">
+        
+        <div>Working with Governments (FY25/FY26) (Dec 25)</div>
+        
+        <div>AFS Competing Fairly - Short Take (FY25) (Dec 25)</div>
+        
+        <div>Accelerating AI Mastery: Role-Based DeepLearning.AI Certifications (Nov 25)</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="build-footer">CVFoundry v0.1.1 — 2026-01-25 (rev f436dbf2de)</div>
+
+</body>
+</html>
