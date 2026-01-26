@@ -49,6 +49,9 @@ Always follow the structure and metadata defined in the HTML comment header abov
 * Do not use markdown or code blocks unless specifically requested or for visual outputs like Mermaid diagrams.
 
 ---
+---
+
+---
 ### OPTIONAL & EXPANDABLE SECTIONS
 ---
 
