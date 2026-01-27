@@ -2,256 +2,169 @@
 <html>
 <head>
   <meta charset="utf-8"/>
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Michael Jackson — 1-Pager</title>
+  <title>Michael Jackson — Resume</title>
   <style>
-    @page { size: 16in 9in; margin: 0.45in; }
-
     :root {
       --accent: #A100FF;
       --text: #111827;
       --muted: #4b5563;
       --rule: #e5e7eb;
+      --bg: #ffffff;
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
+      background: var(--bg);
       margin: 0;
+      padding: 0;
     }
 
-    h1, h2, h3 { margin: 0; }
+    
+    a { color: inherit; text-decoration: none; }
 
     .page {
-      display: grid;
-      grid-template-rows: auto auto 1fr auto;
-      gap: 0.6rem;
-      padding: 0.15in 0.25in;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px 28px 40px 28px;
     }
 
     .header {
       display: grid;
       grid-template-columns: 1fr auto;
+      gap: 16px;
       align-items: end;
-      padding-bottom: 0.25rem;
-      border-bottom: 1px solid var(--rule);
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--rule);
+      margin-bottom: 18px;
     }
 
     .header-left {
       display: grid;
       grid-template-columns: 1fr auto;
+      gap: 14px;
       align-items: end;
-      gap: 0.6rem;
+    }
+
+    .name {
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1.05;
+      margin: 0;
+    }
+
+    .headline {
+      font-size: 15px;
+      font-weight: 650;
+      margin-top: 6px;
+      color: var(--text);
     }
 
     .header-logo {
-      height: 26px;
+      height: 28px;
       width: auto;
       opacity: 0.92;
       object-fit: contain;
       align-self: start;
     }
 
-    .name {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--accent);
-      line-height: 1.05;
-    }
-
-    .headline {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
-      margin-top: 0.15rem;
-    }
-
     .meta {
-      font-size: 12px;
+      font-size: 12.5px;
       color: var(--muted);
       text-align: right;
-      line-height: 1.35;
+      line-height: 1.45;
     }
 
-    .meta a {
-      color: inherit;
-      text-decoration: none;
+    .section {
+      margin: 18px 0;
     }
 
-    .summary {
-      font-size: 11.5px;
+    .section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       color: var(--muted);
-      line-height: 1.25;
-      margin: 0.25rem 0 0.45rem 0;
-    }
-
-    .top {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 0.7rem;
-    }
-
-    .card {
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      padding: 0.55rem 0.6rem;
-    }
-
-    .card.accented {
+      font-weight: 900;
+      margin: 0 0 10px 0;
+      padding-top: 10px;
       border-top: 3px solid var(--accent);
     }
 
-    .card h3 {
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--muted);
-      margin-bottom: 0.35rem;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 1rem;
-    }
-
-    li {
-      font-size: 12px;
-      line-height: 1.25;
-      margin: 0.15rem 0;
-    }
-
-    .strengths {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.45rem 0.7rem;
-    }
-
-    .bucket-title {
-      font-size: 12px;
-      font-weight: 700;
+    .summary {
+      font-size: 13px;
+      line-height: 1.45;
       color: var(--text);
-      margin-bottom: 0.15rem;
-    }
-
-    .bucket-items {
-      font-size: 11.5px;
-      color: var(--muted);
-      line-height: 1.25;
-    }
-
-    .wins {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .wins td {
-      border-top: 1px solid var(--rule);
-      padding: 0.35rem 0;
-      vertical-align: top;
-    }
-
-    .wins tr:first-child td { border-top: none; }
-
-    .win-title {
-      font-size: 12px;
-      font-weight: 700;
       margin: 0;
-    }
-
-    .win-impact {
-      font-size: 11.5px;
-      color: var(--muted);
-      margin: 0.1rem 0 0 0;
-      line-height: 1.25;
-    }
-
-    .exp-table {
-      width: 100%;
-      border-collapse: collapse;
-      table-layout: fixed;
-      --exp-col-role: 25%;
-      --exp-col-client: 22%;
-      --exp-col-dates: 8%;
-      --exp-col-impact: 45%;
-    }
-
-    .exp-table col.col-role { width: var(--exp-col-role); }
-    .exp-table col.col-client { width: var(--exp-col-client); }
-    .exp-table col.col-dates { width: var(--exp-col-dates); }
-    .exp-table col.col-impact { width: var(--exp-col-impact); }
-
-    .exp-table th {
-      text-align: left;
-      font-size: 11px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      padding: 0 0 0.25rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .exp-table td {
-      font-size: 11.5px;
-      padding: 0.3rem 0;
-      vertical-align: top;
-      border-bottom: 1px solid var(--rule);
     }
 
     .role {
-      font-weight: 700;
+      margin: 14px 0 6px 0;
+    }
+
+    .role-title {
+      font-size: 15px;
+      font-weight: 800;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .role-meta {
+      margin-top: 3px;
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .role-meta .employer {
+      font-style: italic;
       color: var(--text);
     }
 
     .client {
+      margin-top: 4px;
+      font-size: 12.5px;
       color: var(--muted);
     }
 
-    .dates {
-      color: var(--muted);
-      white-space: nowrap;
+    ul {
+      margin: 8px 0 0 0;
+      padding-left: 18px;
     }
 
-    .impact {
+    li {
+      margin: 4px 0;
+      line-height: 1.35;
+      font-size: 12.8px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .small-list div {
+      font-size: 12.5px;
       color: var(--text);
-      white-space: normal;
-      overflow-wrap: anywhere;
-      word-break: break-word;
+      line-height: 1.35;
+      margin: 2px 0;
     }
 
     .footer {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0.7rem;
+      margin-top: 26px;
+      padding-top: 10px;
       border-top: 1px solid var(--rule);
-      padding-top: 0.35rem;
-    }
-
-    .footer .label {
       font-size: 11px;
       color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      font-weight: 800;
-      margin-bottom: 0.15rem;
-    }
-
-    .footer .value {
-      font-size: 11.5px;
-      color: var(--text);
-      line-height: 1.2;
-    }
-
-    .build-footer {
-      position: fixed;
-      right: 0.45in;
-      bottom: 0.2in;
-      font-size: 10px;
-      color: var(--muted);
       text-align: right;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 0.05rem 0.25rem;
-      border-radius: 6px;
+    }
+
+    @media print {
+      .page { max-width: none; padding: 0.45in; }
+      a { text-decoration: none; }
     }
   </style>
 </head>
@@ -276,211 +189,539 @@
     </div>
   </div>
 
-  <div class="top">
-    <div class="card accented">
-      <h3>Executive Summary</h3>
-      <div class="summary">Associate Director focused on AI/LLM technology architecture and enterprise adoption—bringing governance, operating model design, and delivery execution together to turn generative AI into an auditable, repeatable capability. Led AI strategy and automation initiatives for a major DoD program, including an AI strategic plan aligned to NIST AI RMF, TRACE methodology for governed AI-assisted content production, and a TILETS enablement model that achieved >60% workforce AI literacy. Known for translating emerging AI capabilities into secure, practical workflows that improve delivery speed and communication quality.
-</div>
+  <div class="section">
+    <div class="section-title">Summary</div>
+    <p class="summary">Associate Director focused on AI/LLM technology architecture and enterprise adoption—bringing governance, operating model design, and delivery execution together to turn generative AI into an auditable, repeatable capability. Led AI strategy and automation initiatives for a major DoD program, including an AI strategic plan aligned to NIST AI RMF, TRACE methodology for governed AI-assisted content production, and a TILETS enablement model that achieved >60% workforce AI literacy. Known for translating emerging AI capabilities into secure, practical workflows that improve delivery speed and communication quality.
+</p>
+    
+    <ul>
+      
+      <li>Led AI strategy and governed adoption for mission-critical public-sector programs; delivered measurable productivity gains</li>
+      
+      <li>Designed human-in-the-loop AI operating models aligned to NIST AI RMF, auditability, and delivery execution</li>
+      
+      <li>Combined disciplined program leadership with practical automation to accelerate outcomes and strengthen stakeholder trust</li>
+      
+    </ul>
+    
+  </div>
+
+  
+  <div class="section">
+    <div class="section-title">Signature Proof</div>
+    <ul>
+      
+      <li><strong>Established AI Operating Model for USAF Human Capital Program</strong> — Authored AI Strategic Plan ("Sharpen the Axe") with a Crawl–Walk–Run maturity model aligned to NIST AI RMF</li>
+      
+      <li><strong>Designed Intent Foundry v1.1 for AI-Assisted Knowledge Work</strong> — Designed and implemented a reusable system that converts human intent into decision-grade, traceable synthesis and execution-ready artifacts through staged HITL collaboration</li>
+      
+      <li><strong>Delivery Governance for State Human Services Case Management</strong> — Maintained delivery alignment across scope, resourcing, risks, and milestones through structured governance</li>
+      
+      <li><strong>Scaled Contact Center Operations and Implemented Salesforce</strong> — Scaled fixed-price operations to 300+ personnel while maintaining service continuity through vendor transition</li>
+      
+    </ul>
+  </div>
+  
+
+  <div class="section">
+    <div class="section-title">Experience</div>
+    
+    <div class="role">
+      <div class="role-title">AI and Innovation Lead</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Oct 25–Present)</div>
+      
+      <div class="client"><strong>Client:</strong> U.S. Air Force Human Capital Modernization Program</div>
+      
       <ul>
         
-        <li>Led AI strategy and governed adoption for mission-critical public-sector programs; delivered measurable productivity gains</li>
+        <li>Authored AFIPPS AI Strategic Plan ("Sharpen the Axe") with a Crawl–Walk–Run maturity model aligned to NIST AI RMF</li>
         
-        <li>Designed human-in-the-loop AI operating models aligned to NIST AI RMF, auditability, and delivery execution</li>
+        <li>Designed TRACE methodology and TILETS learning loop for governed, auditable AI-assisted document production; achieved >60% AI enablement and built an AI Champion network</li>
         
-        <li>Combined disciplined program leadership with practical automation to accelerate outcomes and strengthen stakeholder trust</li>
+        <li>Delivered 15+ AI assistants; reduced manual reporting time 40% and accelerated test design cycles 30%</li>
+        
+        <li>Enabled rapid Oracle APEX demo delivery for an upcoming client presentation by introducing AI-assisted progress reporting and readiness updates</li>
         
       </ul>
-
-      <div style="height: 0.45rem;"></div>
-
-      <h3>Core Strengths</h3>
-      <div class="strengths">
-        
-        <div>
-          <div class="bucket-title">AI/LLM</div>
-          <div class="bucket-items">AI Program Governance, AI Operating Model Design, AI Risk And Compliance, Human In The Loop Systems</div>
-        </div>
-        
-        <div>
-          <div class="bucket-title">Delivery</div>
-          <div class="bucket-items">Complex Program Delivery, Governance And Controls, Vendor Management, Metrics And Outcomes Management</div>
-        </div>
-        
-        <div>
-          <div class="bucket-title">Domains</div>
-          <div class="bucket-items">Defense, Public Sector, Healthcare Payer, Contact Center</div>
-        </div>
-        
-        <div>
-          <div class="bucket-title">Tools</div>
-          <div class="bucket-items">Windsurf, LLM Prompting, Jira, Confluence</div>
-        </div>
-        
-      </div>
     </div>
+    
+    <div class="role">
+      <div class="role-title">AI Learning & Experimentation (Parallel Track)</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Oct 25–Present)</div>
+      
+      <div class="client"><strong>Client:</strong> Self-Directed AI Learning and Experimentation</div>
+      
+      <ul>
+        
+        <li>Designed and implemented Intent Foundry, an AI-accelerated preparation system that converts human intent into decision-grade, traceable synthesis and execution-ready artifacts through staged HITL collaboration</li>
+        
+        <li>Extended the platform with recasting (forward intent→outputs and reverse outputs→evidence→inferred intent) to enable validation, auditability, and alternate stakeholder perspectives</li>
+        
+        <li>Introduced deterministic executive packaging: re-issue any run as a single executive-ready document, driven by run-scoped YAML specifications and preserving traceability to source artifacts and HITL decisions</li>
+        
+        <li>Established a clean separation between deterministic artifact generation and final narrative packaging, enabling repeatable packaging, improved reuse, and audit-friendly governance</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">AI Practitioner (Internal Assignment)</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Jun 26–Sep 26)</div>
+      
+      <div class="client"><strong>Client:</strong> Internal (Accenture)</div>
+      
+      <ul>
+        
+        <li>Completed AI Practitioner upskilling and earned Accenture Certified Delivery Professional (CDP) certification</li>
+        
+        <li>Served as delivery subject matter expert for three sizable pursuits, authoring proposal sections on governance, delivery methodology, staffing models, and risk management</li>
+        
+        <li>Advised leadership and collaborated with sales and solution architecture teams to validate feasibility, refine requirements, and align delivery plans to client expectations</li>
+        
+        <li>Built AI-assisted workflows for deep research, proposal drafting, and internal communications to improve speed and quality</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Program Delivery Lead</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Oct 22–May 25)</div>
+      
+      <div class="client"><strong>Client:</strong> State Human Services Agency</div>
+      
+      <ul>
+        
+        <li>Owned project management controls and tooling, maintaining detailed plans, estimates, and progress tracking to enable effective leadership oversight</li>
+        
+        <li>Led operational and administrative delivery functions including onboarding/offboarding, time-tracking compliance, and system/security access provisioning</li>
+        
+        <li>Managed contract and financial operations including contractual deliverables, client acceptance, and end-to-end invoicing accuracy and compliance</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Service Delivery Lead</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (May 22–Jan 23)</div>
+      
+      <div class="client"><strong>Client:</strong> State Health Insurance Marketplace</div>
+      
+      <ul>
+        
+        <li>Owned fixed-price service delivery and day-to-day operations for a contact center organization scaled to 300+ personnel</li>
+        
+        <li>Led workforce planning, quality management, and service delivery metrics to meet service-level expectations and drive continuous improvement</li>
+        
+        <li>Managed financial oversight and labor mix to align delivery performance with contractual and budgetary targets</li>
+        
+        <li>Directed vendor transition and a six-month Salesforce implementation prior to go-live to enable case tracking, analytics, and client engagement workflows</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Project Management Advisor</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Jul 22–Aug 22)</div>
+      
+      <div class="client"><strong>Client:</strong> State Medicaid Agency</div>
+      
+      <ul>
+        
+        <li>Assessed PMO planning and reporting practices on a high-visibility program using Microsoft Project Server</li>
+        
+        <li>Introduced practical Microsoft Project Server optimization techniques and workarounds to improve scheduling, streamline reporting, and increase project data integrity</li>
+        
+        <li>Coached team members on execution best practices to rapidly improve governance and delivery maturity within a compressed advisory timeframe</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Delivery Lead</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Jan 22–Jun 22)</div>
+      
+      <div class="client"><strong>Client:</strong> State Health & Human Services Agency</div>
+      
+      <ul>
+        
+        <li>Led a six-month assessment to remediate third-party vendor performance issues for a statewide program</li>
+        
+        <li>Directed a small team to diagnose root causes and deliver an actionable remediation plan with performance metrics and governance protocols</li>
+        
+        <li>Served as communications bridge between senior client stakeholders and vendor leadership; engagement stabilized performance and led to follow-on work</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Deputy Delivery Manager</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Jun 21–Feb 22)</div>
+      
+      <div class="client"><strong>Client:</strong> State Health Insurance Marketplace</div>
+      
+      <ul>
+        
+        <li>Led crisis-driven vendor remediation engagement triggered by an unplanned COVID-era transition to remote operations</li>
+        
+        <li>Directed an operational assessment across staffing, training, technology enablement, and quality assurance; delivered a roadmap of actionable recommendations to restore performance</li>
+        
+        <li>Served as primary client liaison and established project governance, transparent reporting, and execution monitoring against remediation plan and service-level expectations</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Program Manager</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Feb 21–Jun 21)</div>
+      
+      <div class="client"><strong>Client:</strong> State Housing Agency</div>
+      
+      <ul>
+        
+        <li>Co-led a rapid-response team supporting emergency shelter operations during a humanitarian surge impacting the state's right-to-shelter system</li>
+        
+        <li>Designed and implemented improved call center, intake, and data-management processes to increase operational capacity under compressed timelines</li>
+        
+        <li>Improved data tracking systems to provide leadership visibility into shelter availability and needs, and established structured plans, monitoring, and stakeholder reporting</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Service Delivery Lead</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Sep 20–Jan 21)</div>
+      
+      <div class="client"><strong>Client:</strong> State Health Insurance Marketplace</div>
+      
+      <ul>
+        
+        <li>Supported a high-stakes assessment to stabilize performance during transition to a new contact center vendor</li>
+        
+        <li>Led assessment workstreams to diagnose root causes of performance gaps and develop practical process improvement and remediation plans</li>
+        
+        <li>Implemented standard processes and analysis tools to improve diagnostic efficiency, and helped manage engagement delivery and financial commitments</li>
+        
+        <li>Supported solution design and proposal development for follow-on work to expand account footprint</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Delivery Lead</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Apr 20–Jun 20)</div>
+      
+      <div class="client"><strong>Client:</strong> State Public Health Program</div>
+      
+      <ul>
+        
+        <li>Supported emergency implementation of a statewide COVID-19 contact tracing application under aggressive public health timelines</li>
+        
+        <li>Served as liaison between technology development teams and public health stakeholders to align requirements, workflows, and readiness</li>
+        
+        <li>Helped maintain execution cadence and delivery quality through structured coordination and issue resolution under crisis conditions</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">On-Site Project Commander</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Feb 20–Jun 20)</div>
+      
+      <div class="client"><strong>Client:</strong> State Health & Human Services Agency</div>
+      
+      <ul>
+        
+        <li>Embedded within the COVID emergency command center as on-site project commander and trusted advisor to senior state leadership</li>
+        
+        <li>Mobilized operational and technical workflows for contact tracing launch by translating evolving public health guidance into actionable delivery plans</li>
+        
+        <li>Orchestrated cross-functional alignment across technology, public health, and communications teams; managed issue tracking, risks, and high-tempo stakeholder updates</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Project Manager</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Mar 20–May 20)</div>
+      
+      <div class="client"><strong>Client:</strong> State Public Health Program</div>
+      
+      <ul>
+        
+        <li>Directed rapid implementation of statewide contact tracing workflows and operating model</li>
+        
+        <li>Aligned technical teams and public health stakeholders on data intake, outreach protocols, and readiness</li>
+        
+        <li>Managed issue tracking, risks, and stakeholder updates under compressed timelines</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Operations Architect</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Aug 19–Dec 19)</div>
+      
+      <div class="client"><strong>Client:</strong> State Health & Human Services Agency</div>
+      
+      <ul>
+        
+        <li>Advised client leadership on integration management organization design, defining roles, ownership, and governance for production integrations</li>
+        
+        <li>Co-authored operational run books and designed monitoring and escalation strategy to improve operational readiness and incident response</li>
+        
+        <li>Facilitated cross-team dependency mapping and integrated schedules, including contingency procedures to mitigate failed integration dependencies</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Steady State Lead</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Apr 18–Jun 19)</div>
+      
+      <div class="client"><strong>Client:</strong> State Revenue Agency</div>
+      
+      <ul>
+        
+        <li>Led issue-team support to resolve system errors through targeted queries and data cleanup</li>
+        
+        <li>Improved operational delivery by accelerating defect resolution and cross-team coordination</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Client Service Delivery Lead</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Jan 18–Jun 18)</div>
+      
+      <div class="client"><strong>Client:</strong> State Transportation Authority</div>
+      
+      <ul>
+        
+        <li>Served as trusted advisor to MBTA Capital Projects and Planning leadership, overseeing contract obligations and delivery quality across consulting workstreams</li>
+        
+        <li>Provided strategic platform advisory during selection and onboarding of e-Builder to manage the capital project portfolio</li>
+        
+        <li>Directed project management and operational consulting efforts, optimizing resource deployment and maintaining accountability, client satisfaction, and delivery value</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Program / Project Management Lead</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Mar 17–Aug 17)</div>
+      
+      <div class="client"><strong>Client:</strong> District Health Insurance Marketplace</div>
+      
+      <ul>
+        
+        <li>Provided day-to-day program leadership for reuse and adaptation of Massachusetts Health Connector assets for the DC Health Benefit Exchange</li>
+        
+        <li>Guided HIX domain decisions for product configuration, carrier integration, broker workflows, and call center readiness</li>
+        
+        <li>Applied quality assurance best practices for end-to-end testing, operational readiness, and go-live support</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Engagement Lead</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Jun 16–Aug 16)</div>
+      
+      <div class="client"><strong>Client:</strong> State Agency Partnership</div>
+      
+      <ul>
+        
+        <li>Led a high-stakes, politically sensitive engagement to resolve a multi-agency benefits processing dispute causing premium overcharges and coverage gaps</li>
+        
+        <li>Directed forensic root cause analysis and quantified financial obligations; facilitated negotiation of a Memorandum of Understanding (MOU) to reconcile obligations and implement permanent safeguards</li>
+        
+        <li>Served as executive liaison across the Governor's Office, GIC, and MBTA; provided transparent progress reporting and delivered a successful resolution that led to substantial follow-on work</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Enterprise Architecture Practitioner</div>
+      <div class="role-meta"><span class="employer">Accenture</span> (Apr 16–Present)</div>
+      
+      <div class="client"><strong>Client:</strong> Multiple clients</div>
+      
+      <ul>
+        
+        <li>Integrated TOGAF- and ArchiMate-based enterprise architecture practices to create current-state and target-state blueprints</li>
+        
+        <li>Established objective-to-solution traceability across business, application, and technology layers to enable impact and gap analysis</li>
+        
+        <li>Translated architecture gaps into sequenced work packages and roadmaps to align delivery execution with enterprise goals</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Vice President, Customer Success</div>
+      <div class="role-meta"><span class="employer">HealthEdge</span> (Jul 13–Apr 16)</div>
+      
+      <div class="client"><strong>Client:</strong> Commercial Health Plans</div>
+      
+      <ul>
+        
+        <li>Progressively promoted through executive leadership roles spanning customer success, professional services, and national accounts</li>
+        
+        <li>Partnered with payer C-suite to resolve complex operational issues, strengthen strategic alignment, and improve product value realization</li>
+        
+        <li>Led a 100+ person professional services organization; improved utilization and profitability supporting $30M+ annual revenue</li>
+        
+        <li>Provided centralized oversight for large-scale implementations, coaching project managers and mitigating delivery risks across national accounts</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Client Executive</div>
+      <div class="role-meta"><span class="employer">Dell</span> (Oct 12–Jun 13)</div>
+      
+      <div class="client"><strong>Client:</strong> Regional Health Plan</div>
+      
+      <ul>
+        
+        <li>Led delivery oversight for a major healthcare services account with a 400+ person global delivery team</li>
+        
+        <li>Improved operational stability and service levels through executive engagement and rigorous issue management</li>
+        
+        <li>Managed contract compliance across BPO and IT outsourcing services during delivery transition</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Client Executive</div>
+      <div class="role-meta"><span class="employer">Dell Perot Systems</span> (Oct 08–Jun 13)</div>
+      
+      <div class="client"><strong>Client:</strong> State Health Insurance Marketplace</div>
+      
+      <ul>
+        
+        <li>Assumed leadership of a politically sensitive post-implementation program and executed a full turnaround by rebuilding stakeholder trust through radical transparency and issue resolution</li>
+        
+        <li>Identified flaws in the contract pricing model and negotiated amendments to stabilize delivery and ensure fair cost recovery</li>
+        
+        <li>Restored executive confidence and won a competitive six-year contract renewal with expanded scope through improved performance tracking and governance</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Interim CFO/CAO & Client Account Lead</div>
+      <div class="role-meta"><span class="employer">Perot Systems</span> (Jan 08–Oct 08)</div>
+      
+      <div class="client"><strong>Client:</strong> Academic Medical Center</div>
+      
+      <ul>
+        
+        <li>Stabilized and restructured a financially distressed $72M/year IT services account by introducing financial discipline and P&L accountability</li>
+        
+        <li>Resolved long-standing A/R and client payment disputes to improve cash flow, transparency, and stakeholder trust</li>
+        
+        <li>Strengthened joint governance and began implementation of integrated reporting to replace fragmented tools and improve financial visibility</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">PMO Turnaround Lead</div>
+      <div class="role-meta"><span class="employer">Perot Systems</span> (Jun 07–Jan 08)</div>
+      
+      <div class="client"><strong>Client:</strong> Academic Medical Center</div>
+      
+      <ul>
+        
+        <li>Assumed leadership of a 44-person PMO during a high-risk transition when the function was slated for client in-sourcing due to poor performance</li>
+        
+        <li>Rapidly established a structured PMO operating model and governance practices to improve delivery performance and oversight</li>
+        
+        <li>Restored client confidence and helped retain the account by stabilizing execution and improving transparency</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Director, Project Management Office</div>
+      <div class="role-meta"><span class="employer">Perot Systems</span> (Jun 06–Jun 07)</div>
+      
+      <div class="client"><strong>Client:</strong> Multi-State Health System</div>
+      
+      <ul>
+        
+        <li>Launched a new PMO and onboarded 60 associates including five project managers</li>
+        
+        <li>Established core delivery and compliance processes; recognized for operational best practices</li>
+        
+        <li>Improved contract compliance tracking and customer satisfaction operating cadence</li>
+        
+      </ul>
+    </div>
+    
+    <div class="role">
+      <div class="role-title">Director, Project Management Office</div>
+      <div class="role-meta"><span class="employer">Perot Systems</span> (Dec 04–Jun 06)</div>
+      
+      <div class="client"><strong>Client:</strong> Regional Health Plan</div>
+      
+      <ul>
+        
+        <li>Built and led a 70-person PMO managing a $25M+ annual portfolio across 120+ technology projects</li>
+        
+        <li>Introduced portfolio planning, resource forecasting, and proactive governance for consistent execution</li>
+        
+      </ul>
+    </div>
+    
+  </div>
 
-    <div class="card accented">
-      <h3>Signature Proof</h3>
-      <table class="wins">
-        <tbody>
+  <div class="section">
+    <div class="two-col">
+      <div>
+        <div class="section-title">Education</div>
+        <div class="small-list">
           
-          <tr>
-            <td>
-              <div class="win-title">Established AI Operating Model for USAF Human Capital Program</div>
-              <div class="win-impact">Authored AI Strategic Plan ("Sharpen the Axe") with a Crawl–Walk–Run maturity model aligned to NIST AI RMF</div>
-            </td>
-          </tr>
+          <div>United States Military Academy at West Point — B.S., Engineering, Computer Science</div>
           
-          <tr>
-            <td>
-              <div class="win-title">Designed Intent-Foundry v1.1 for AI-Assisted Knowledge Work</div>
-              <div class="win-impact">Designed and implemented a reusable system that converts human intent into decision-grade, traceable synthesis and execution-ready artifacts through staged HITL collaboration</div>
-            </td>
-          </tr>
+          <div>Bowie State University (University of Maryland European Division) — M.S., Management Information Systems</div>
           
-          <tr>
-            <td>
-              <div class="win-title">Delivery Governance for State Human Services Case Management</div>
-              <div class="win-impact">Maintained delivery alignment across scope, resourcing, risks, and milestones through structured governance</div>
-            </td>
-          </tr>
+        </div>
+      </div>
+      <div>
+        <div class="section-title">Selected Training</div>
+        <div class="small-list">
           
-          <tr>
-            <td>
-              <div class="win-title">Scaled Contact Center Operations and Implemented Salesforce</div>
-              <div class="win-impact">Scaled fixed-price operations to 300+ personnel while maintaining service continuity through vendor transition</div>
-            </td>
-          </tr>
           
-        </tbody>
-      </table>
+          <div>Working with Governments (FY25/FY26) (Dec 25)</div>
+          
+          <div>AFS Competing Fairly - Short Take (FY25) (Dec 25)</div>
+          
+          <div>Accelerating AI Mastery: Role-Based DeepLearning.AI Certifications (Nov 25)</div>
+          
+          <div>Build Application using GitHub Copilot (Recommended for Custom Engineers) (Nov 25)</div>
+          
+          <div>Accenture Assets in conjunction with Ecosystem tools (Nov 25)</div>
+          
+          
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="card">
-    <h3>Selected Experience</h3>
-    <table class="exp-table">
-      <colgroup>
-        <col class="col-role" />
-        <col class="col-client" />
-        <col class="col-dates" />
-        <col class="col-impact" />
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Role</th>
-          <th>Client / Context</th>
-          <th>Dates</th>
-          <th>Impact</th>
-        </tr>
-      </thead>
-      <tbody>
-        
-        <tr>
-          <td>
-            <div class="role">AI and Innovation Lead — Accenture</div>
-          </td>
-          <td class="client">
-            U.S. Air Force Human Capital Modernization Program
-          </td>
-          <td class="dates">Oct 25–Present</td>
-          <td class="impact" title="Authored AFIPPS AI Strategic Plan ("Sharpen the Axe") with a Crawl–Walk–Run maturity model aligned to NIST AI RMF">Authored AFIPPS AI Strategic Plan ("Sharpen the Axe") with a Crawl–Walk–Run maturity model aligned to NIST AI RMF</td>
-        </tr>
-        
-        <tr>
-          <td>
-            <div class="role">AI Learning & Experimentation (Parallel Track) — Accenture</div>
-          </td>
-          <td class="client">
-            Self-Directed AI Learning and Experimentation
-          </td>
-          <td class="dates">Oct 25–Present</td>
-          <td class="impact" title="Designed and implemented Intent Foundry, an AI-accelerated preparation system that converts human intent into decision-grade, traceable synthesis and execution-ready artifacts through staged HITL collaboration">Designed and implemented Intent Foundry, an AI-accelerated preparation system that converts human intent into decision-grade, traceable synthesis and execution-ready artifacts through staged HITL collaboration</td>
-        </tr>
-        
-        <tr>
-          <td>
-            <div class="role">AI Practitioner (Internal Assignment) — Accenture</div>
-          </td>
-          <td class="client">
-            Internal (Accenture)
-          </td>
-          <td class="dates">Jun 26–Sep 26</td>
-          <td class="impact" title="Completed AI Practitioner upskilling and earned Accenture Certified Delivery Professional (CDP) certification">Completed AI Practitioner upskilling and earned Accenture Certified Delivery Professional (CDP) certification</td>
-        </tr>
-        
-        <tr>
-          <td>
-            <div class="role">Program Delivery Lead — Accenture</div>
-          </td>
-          <td class="client">
-            State Human Services Agency
-          </td>
-          <td class="dates">Oct 22–May 25</td>
-          <td class="impact" title="Owned project management controls and tooling, maintaining detailed plans, estimates, and progress tracking to enable effective leadership oversight">Owned project management controls and tooling, maintaining detailed plans, estimates, and progress tracking to enable effective leadership oversight</td>
-        </tr>
-        
-        <tr>
-          <td>
-            <div class="role">Service Delivery Lead — Accenture</div>
-          </td>
-          <td class="client">
-            State Health Insurance Marketplace
-          </td>
-          <td class="dates">May 22–Jan 23</td>
-          <td class="impact" title="Owned fixed-price service delivery and day-to-day operations for a contact center organization scaled to 300+ personnel">Owned fixed-price service delivery and day-to-day operations for a contact center organization scaled to 300+ personnel</td>
-        </tr>
-        
-        <tr>
-          <td>
-            <div class="role">Delivery Lead — Accenture</div>
-          </td>
-          <td class="client">
-            State Health & Human Services Agency
-          </td>
-          <td class="dates">Jan 22–Jun 22</td>
-          <td class="impact" title="Led a six-month assessment to remediate third-party vendor performance issues for a statewide program">Led a six-month assessment to remediate third-party vendor performance issues for a statewide program</td>
-        </tr>
-        
-      </tbody>
-    </table>
+  <div class="section">
+    <div class="section-title">Certifications</div>
+    <div class="small-list">
+      
+      <div>Certified Delivery Professional — Accenture (2025)</div>
+      
+    </div>
   </div>
 
-  <div class="footer">
-    <div>
-      <div class="label">Education</div>
-      <div class="value">
-        
-        <div>United States Military Academy at West Point — B.S., Engineering, Computer Science</div>
-        
-        <div>Bowie State University (University of Maryland European Division) — M.S., Management Information Systems</div>
-        
-      </div>
-    </div>
-    <div>
-      <div class="label">Certifications</div>
-      <div class="value">
-        
-        <div>Certified Delivery Professional — Accenture (2025)</div>
-        
-      </div>
-    </div>
-    <div>
-      <div class="label">Selected Training</div>
-      <div class="value">
-        
-        <div>Working with Governments (FY25/FY26) (Dec 25)</div>
-        
-        <div>AFS Competing Fairly - Short Take (FY25) (Dec 25)</div>
-        
-        <div>Accelerating AI Mastery: Role-Based DeepLearning.AI Certifications (Nov 25)</div>
-        
-      </div>
-    </div>
-  </div>
+  <div class="footer">CVFoundry v0.1.1 — 2026-01-26 (rev 2f04b55446)</div>
 </div>
-
-<div class="build-footer">CVFoundry v0.1.1 — 2026-01-27 (rev fc375f7ac7)</div>
 
 </body>
 </html>
