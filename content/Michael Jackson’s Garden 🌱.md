@@ -1,4 +1,3 @@
-# Michael Jackson’s Garden 🌱
 
 This is a living body of notes, essays, and working artifacts.
 Some pages are polished. Many are not. That’s intentional.
