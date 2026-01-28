@@ -1,13 +1,16 @@
----
-title: Welcome to Quartz
----
+# Michael Jackson’s Garden 🌱
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+This is a living body of notes, essays, and working artifacts.
+Some pages are polished. Many are not. That’s intentional.
 
-This is my first addition.
+## 🧠 Living Documentation
+- [[content/Notes/AI/index]]
+- [[content/Notes/Architecture/index]]
+- [[content/Notes/Governance/index]]
 
-First addition from Obsidian. 
+## ✍️ Essays
+- [[content/Essays/2026-01-AI-Foundry]]
+- [[content/Essays/Why-Living-Docs]]
 
-[[README MLJ]]
-[[New Chapter]]
+> [!note]
+> This site is updated as my thinking evolves.
