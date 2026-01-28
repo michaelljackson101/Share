@@ -2,7 +2,9 @@
 title: Architecture Notes
 draft: false
 tags:
-  - example-tag
+  - ea
+  - enterprise_architecture
+  - archimate
 ---
  
 Architecture - The rest of your content lives here. You can use **Markdown** here :)

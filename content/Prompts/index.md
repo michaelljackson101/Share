@@ -2,7 +2,10 @@
 title: Prompt Library
 draft: false
 tags:
-  - example-tag
 ---
  
-Prompts - The rest of your content lives here. You can use **Markdown** here :)
+Welcome to my Prompt Library.
+
+Feel free to browse the collection and copy, remix, or adapt anything you find useful.
+
+If you have any questions (or you’d like to suggest an addition), reach out anytime at Michael.Jackson@POBox.com.
