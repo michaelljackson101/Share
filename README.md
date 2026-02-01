@@ -15,3 +15,20 @@ Quartz is a set of tools that helps you publish your [digital garden](https://jz
     <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
   </a>
 </p>
+
+<br>
+
+<div align="center">
+
+<!-- brand-footer-start -->
+
+---
+
+**Michael L. Jackson**
+[Website](https://michaelljackson101.github.io/Share/index.html) • [GitHub](https://github.com/michaelljackson101) • [LinkedIn](https://www.linkedin.com/in/michaelljackson/)
+
+*Building systems that think.*
+
+<!-- brand-footer-end -->
+
+</div>
