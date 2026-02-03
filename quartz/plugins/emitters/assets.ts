@@ -6,6 +6,15 @@ import { glob } from "../../util/glob"
 import { Argv } from "../../util/ctx"
 import { QuartzConfig } from "../../cfg"
 
+const getAssetDestName = (fp: FilePath) => {
+  const originalExt = path.extname(fp)
+  let name = slugifyFilePath(fp) as string
+  if ((originalExt === ".html" || originalExt === ".htm") && !name.endsWith(originalExt)) {
+    name = name + originalExt
+  }
+  return name
+}
+
 const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
   // glob all non MD files in content folder and copy it over
   return await glob("**", argv.directory, ["**/*.md", ...cfg.configuration.ignorePatterns])
@@ -14,7 +23,7 @@ const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
 const copyFile = async (argv: Argv, fp: FilePath) => {
   const src = joinSegments(argv.directory, fp) as FilePath
 
-  const name = slugifyFilePath(fp)
+  const name = getAssetDestName(fp)
   const dest = joinSegments(argv.output, name) as FilePath
 
   // ensure dir exists
@@ -42,7 +51,7 @@ export const Assets: QuartzEmitterPlugin = () => {
         if (changeEvent.type === "add" || changeEvent.type === "change") {
           yield copyFile(ctx.argv, changeEvent.path)
         } else if (changeEvent.type === "delete") {
-          const name = slugifyFilePath(changeEvent.path)
+          const name = getAssetDestName(changeEvent.path)
           const dest = joinSegments(ctx.argv.output, name) as FilePath
           await fs.promises.unlink(dest)
         }
