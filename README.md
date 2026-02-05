@@ -6,6 +6,7 @@ owner: Michael Jackson
 status: active
 kind: quartz_site
 created: 2026-02-03
+consumers: ["agentic-audit"]
 ---
 
 # Quartz v4
