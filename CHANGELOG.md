@@ -1,6 +1,6 @@
 ---
 project_name: Share
-last_updated: 2026-02-01
+last_updated: 2026-02-10
 current_version: v4.5.2
 semantic_versioning: true
 ---
@@ -12,6 +12,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!-- latest-entry-marker -->
+## [v4.5.2] - 2026-02-10
+
+### Fixed
+- Fix image source path for header logo (2c7ac1c)
+- Fix assets emitter to preserve .html (045ad68)
+### Other Changes
+- Garden structure + publishing contract + build stamp (3783175)
+- README: suite metadata + add quartz-sync helper (54b51fd)
+- Update resume/one-pager footer to link CVFoundry marketing page (58023d1)
+- Publish CVFoundry marketing page + refresh static HTML outputs (66b8311)
+- Quartz sync: Feb 5, 2026, 6:47 PM (430c40a)
+- Quartz sync: Feb 4, 2026, 9:26 AM (35c4170)
+- Quartz sync: Feb 4, 2026, 8:41 AM (651ebe4)
+- Update logo image source path in CVFoundry HTML (ce67d6d)
+- Update logo image source path in CVFoundry HTML (025a60e)
+- README: add repo metadata for MCP compliance (ac86480)
+- Update CVFoundry artifacts to v0.1.5 (cb46e71)
+- Update CVFoundry artifacts (15b4537)
+- updated extension (ddf5df5)
+- Quartz sync: Feb 1, 2026, 10:07 PM (b256264)
+- chore: remove duplicate CVFoundry artifacts (f893d7b)
+- Quartz sync: Feb 1, 2026, 4:37 PM (0095d61)
+
 ## [v4.5.2] - 2026-02-01
 
 ### Recent Activity
