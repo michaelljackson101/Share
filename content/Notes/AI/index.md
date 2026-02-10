@@ -5,4 +5,9 @@ tags:
   - ai
 ---
  
-AI - The rest of your content lives here. You can use **Markdown** here :)
+Working notes on applied AI, agentic workflows, and practical adoption.
+
+## Start here
+
+- [[Prompts]]
+- [[Notes/Governance]]

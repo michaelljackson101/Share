@@ -7,4 +7,9 @@ tags:
   - archimate
 ---
  
-Architecture - The rest of your content lives here. You can use **Markdown** here :)
+Working notes on architecture, systems thinking, and building maintainable, governable systems.
+
+## Start here
+
+- [[Notes/Governance]]
+- [[Foundry-Suite]]

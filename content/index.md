@@ -10,6 +10,8 @@ My goal is to share articles here on various topics—mostly AI-related—primar
 
 Some pages are polished. Many are not. That’s intentional.
 
+![[Meta/build-info#^build-info]]
+
 Feedback is always welcome: Michael.Jackson@POBox.com
 
 ## 🧠 Living Documentation
@@ -17,9 +19,15 @@ Feedback is always welcome: Michael.Jackson@POBox.com
 - [[Notes/Architecture]]
 - [[Notes/Governance]]
 
+## 🧭 Start here
+- [[About]]
+- [[Now]]
+- [[Portfolio]]
+- [[Foundry-Suite]]
+- [[Prompts]]
+
 ## ✍️ Essays
-- [[2026-01-ai-foundry]]
-- [[Why-Living-Docs]]
+- [[Essays]]
 
 > [!note]
 > This site is updated as my thinking evolves.

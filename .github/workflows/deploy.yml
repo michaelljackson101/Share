@@ -26,6 +26,21 @@ jobs:
           node-version: 22
       - name: Install Dependencies
         run: npm ci
+      - name: Write build info
+        run: |
+          mkdir -p content/Meta
+          SHA_SHORT="${GITHUB_SHA::7}"
+          DEPLOYED_UTC="$(date -u '+%Y-%m-%d %H:%M UTC')"
+          cat > content/Meta/build-info.md <<EOF
+          ---
+          title: Build Info
+          draft: false
+          tags:
+            - meta
+          ---
+          
+          Deployed: ${DEPLOYED_UTC} | Commit: ${SHA_SHORT} ^build-info
+          EOF
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
