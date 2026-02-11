@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Foundry-Suite</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231f4fd8'/%3E%3Ctext%20x='32'%20y='41'%20text-anchor='middle'%20font-family='Arial,%20Helvetica,%20sans-serif'%20font-size='30'%20font-weight='900'%20fill='white'%3EFS%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --accent: #1f4fd8;
+      --text: #111827;
+      --muted: #4b5563;
+      --rule: #e5e7eb;
+      --bg: #ffffff;
+      --panel: #f9fafb;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 42px 28px 54px 28px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: start;
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--rule);
+      margin-bottom: 22px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 6px;
+    }
+
+    .brand-title {
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1.05;
+      color: var(--accent);
+      margin: 0;
+    }
+
+    .brand-tagline {
+      font-size: 15px;
+      font-weight: 650;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .brand-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .logo-block {
+      display: grid;
+      gap: 6px;
+      justify-items: end;
+      align-items: start;
+    }
+
+    .logo-wrap {
+      background: #ffffff;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+      align-self: start;
+      opacity: 1;
+    }
+
+    .logo-fallback {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      background: var(--panel);
+      padding: 16px 16px;
+    }
+
+    .card.white {
+      background: #ffffff;
+    }
+
+    h2 {
+      margin: 0 0 10px 0;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 900;
+      border-top: 3px solid var(--accent);
+      padding-top: 10px;
+    }
+
+    h3 {
+      margin: 14px 0 8px 0;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    p {
+      margin: 0 0 10px 0;
+      font-size: 13.5px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    li {
+      margin: 6px 0;
+      font-size: 13.5px;
+      line-height: 1.35;
+      color: var(--text);
+    }
+
+    .pillrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      border: 1px solid var(--rule);
+      background: #ffffff;
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .section {
+      margin-top: 18px;
+    }
+
+    .footer {
+      margin-top: 22px;
+      padding-top: 12px;
+      border-top: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: start;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .footer .right {
+      text-align: right;
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 920px) {
+      .grid { grid-template-columns: 1fr; }
+      .footer { grid-template-columns: 1fr; }
+      .footer .right { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <div class="brand">
+        <h1 class="brand-title">What is Foundry-Suite</h1>
+        <p class="brand-tagline">A federated, local-first ecosystem for artifact-driven human + AI collaboration</p>
+        <p class="brand-subtitle">Status: Active / Evolving • Version: 0.2.0 • Last updated: 2026-02-11</p>
+      </div>
+      <div class="logo-block">
+        <div class="logo-wrap">
+          <img class="logo" src="logo.png" alt="Foundry-Suite" title="Foundry-Suite" />
+        </div>
+        <div class="logo-fallback">Foundry-Suite</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card white">
+        <h2>Executive overview</h2>
+        <p>Foundry-Suite is a federated, local-first ecosystem of small, specialized repositories that help a human founder collaborate with AI in an artifact-driven way.</p>
+        <p>It is designed around a simple goal:</p>
+        <ul>
+          <li>reduce cognitive load for planning, communication, curation, and execution</li>
+          <li>increase creative bandwidth for exploration and “what could be” thinking</li>
+          <li>preserve trust through human-in-the-loop operation and provenance-first workflows</li>
+        </ul>
+        <p>The core design choice is that AI is treated as a <strong>co-collaborator beside you at the workbench</strong>, not merely a tool on the workbench.</p>
+      </div>
+
+      <div class="card">
+        <h2>At a glance</h2>
+        <ul>
+          <li><strong>Governance anchor</strong> repo with suite-wide principles and canonical references</li>
+          <li><strong>Lifecycle spine</strong>: Learning → Idea → Intent → Build → Publish</li>
+          <li><strong>Federation</strong> of cooperating Foundries exchanging artifacts via explicit contracts (often via MCP)</li>
+          <li><strong>Contracts over assumptions</strong> to keep workflows inspectable and safe</li>
+        </ul>
+        <div class="pillrow">
+          <span class="pill">local-first</span>
+          <span class="pill">artifact-driven</span>
+          <span class="pill">provenance-first</span>
+          <span class="pill">human-in-the-loop</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="card white">
+        <h2>What we built recently</h2>
+        <p>Over roughly two weeks of rapid iteration, the suite matured from a set of experiments into a coherent framework:</p>
+        <ul>
+          <li>a shared governance anchor (Foundry-Suite)</li>
+          <li>a consistent lifecycle spine (Learning → Idea → Intent → Build → Publish)</li>
+          <li>a federated model of cooperating repos (Foundries) and temporary experiments (Labs)</li>
+          <li>a practical “contracts over assumptions” approach using MCP tools and structured artifacts</li>
+          <li>operational support for discovery, launching, and monitoring of local services</li>
+          <li>a suite-owned LLM Registry (MCP) to support cost-effective, task-appropriate model selection</li>
+          <li>a suite-owned Foundry Monitor workbench for compliance visibility and operational awareness</li>
+        </ul>
+        <p>The result is not one product or one app. It is a <strong>methodology and working system</strong> for operating an AI-augmented knowledge-work practice.</p>
+      </div>
+    </div>
+
+    <div class="section grid">
+      <div class="card white">
+        <h2>Operating philosophy</h2>
+
+        <h3>1) Artifact-first over chat-first</h3>
+        <p>Chat is valuable for exploration, but durable work requires durable artifacts. The suite pushes work into traceable outputs (submissions, specs, logs, reports, published deliverables).</p>
+
+        <h3>2) Human-in-the-loop by default</h3>
+        <p>A typical pattern is AI proposes, the human approves, AI executes within boundaries, and artifacts are produced with provenance. This keeps the system legible and trustworthy.</p>
+
+        <h3>3) Provenance and transparency are non-negotiable</h3>
+        <p>The suite prefers explicit inputs and outputs, named artifacts, run logs, and clear records of what changed and why.</p>
+
+        <h3>4) Federation over centralization</h3>
+        <p>The suite is deliberately not a monolith. Federation enables autonomy, parallel evolution, resilience when components are offline, and safe experimentation.</p>
+
+        <h3>5) AI beside you as a design target</h3>
+        <p>This is a practical path toward side-by-side collaboration where AI operates inside repeatable pipelines rather than ad-hoc magic.</p>
+      </div>
+
+      <div class="card">
+        <h2>Governance</h2>
+        <p>Foundry-Suite is the governance and canonical anchor. It hosts constitution-level principles, citizenship charters, templates/prompts, and registries for discovery.</p>
+        <p>Detailed implementation patterns (the how) live in the centralized Hints-MCP catalog.</p>
+
+        <h2>Lifecycle spine</h2>
+        <ul>
+          <li>Learning: acquire capability and context</li>
+          <li>Idea: frame opportunities and proposals</li>
+          <li>Intent: commit scope and produce execution-ready specs</li>
+          <li>Build: construct assets and systems</li>
+          <li>Publish: package outputs for reuse and distribution</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="card white">
+        <h2>Component map</h2>
+        <p>This section is intentionally written to be maintainable, distinguishing current from aspirational.</p>
+
+        <h3>Governance anchor: Foundry-Suite</h3>
+        <ul>
+          <li><strong>Current</strong>: shared principles, suite awareness templates, canonical registries</li>
+          <li><strong>Aspirational</strong>: cross-repo contracts under contracts and an ecosystem registry MCP</li>
+        </ul>
+
+        <h3>Suite-owned capabilities</h3>
+        <ul>
+          <li><strong>LLM Registry (MCP)</strong>: cost-effective, task-appropriate model selection; advisory routing and safe fallback posture</li>
+          <li><strong>Foundry Monitor</strong>: compliance visibility and suite-level operational awareness</li>
+        </ul>
+
+        <h3>Core and cross-cutting Foundries</h3>
+        <h3>Core pipeline Foundries</h3>
+        <h3>Learning-Foundry</h3>
+        <ul>
+          <li><strong>Current</strong>: structured learning backlog and artifact-driven learning runs; produces notes and capability artifacts that feed downstream work</li>
+          <li><strong>Aspirational</strong>: richer run packaging and publish-ready learning outputs; tighter integration with downstream Foundries via named artifact contracts</li>
+        </ul>
+
+        <h3>Idea-Foundry</h3>
+        <ul>
+          <li><strong>Current</strong>: intake and shaping of opportunities into structured submissions; bridges raw ideas into handoff-ready packets for downstream execution</li>
+          <li><strong>Aspirational</strong>: more standardized intake schemas and automated quality checks; stronger idea-to-intent handoff automation with explicit gating</li>
+        </ul>
+
+        <h3>Intent-Foundry</h3>
+        <ul>
+          <li><strong>Current</strong>: turns human intent into traceable, execution-ready artifacts and runs; supports workflow steps and packaging into executive-ready bundles</li>
+          <li><strong>Aspirational</strong>: more reusable intent archetypes; richer validation and policy guardrails</li>
+        </ul>
+
+        <h3>Cross-cutting Foundries</h3>
+        <h3>TRACE-Loop-Lite</h3>
+        <ul>
+          <li><strong>Current</strong>: local-first research pipeline emphasizing evidence, narrative, and explainability; exports knowledge artifacts for reuse and publishing</li>
+          <li><strong>Aspirational</strong>: deeper synthesis and stronger packaging for downstream publish consumption</li>
+        </ul>
+
+        <h3>Brand-Foundry</h3>
+        <ul>
+          <li><strong>Current</strong>: advisory posture for narrative, positioning, and polish; helps maintain coherent voice and messaging without auto-editing by default</li>
+          <li><strong>Aspirational</strong>: more structured brand guidance artifacts and checklists; opt-in automation with strong review gates</li>
+        </ul>
+
+        <h3>CV-Foundry</h3>
+        <ul>
+          <li><strong>Current</strong>: produces tailored career artifacts from canonical sources; supports publishing into Share/Quartz outputs</li>
+          <li><strong>Aspirational</strong>: more generalized portfolio packaging for multiple artifact types</li>
+        </ul>
+
+        <h3>Comms-Foundry</h3>
+        <ul>
+          <li><strong>Current</strong>: turns an idea into a canonical Markdown artifact and routes derived outputs; emphasizes safety guardrails for publishing actions</li>
+          <li><strong>Aspirational</strong>: richer distribution policies and repeatable campaign packaging</li>
+        </ul>
+
+        <h3>Prompt-Foundry</h3>
+        <ul>
+          <li><strong>Current</strong>: organizes, validates, and assembles reusable prompts; supports a UI/workbench model for operating prompt assets</li>
+          <li><strong>Aspirational</strong>: stronger test harnesses and prompt provenance workflows</li>
+        </ul>
+
+        <h3>Supporting capability repos</h3>
+        <ul>
+          <li><strong>Hints-MCP</strong>: approved how-to patterns; semantic search for rapid retrieval during builds and audits</li>
+          <li><strong>Agentic-MCP</strong>: operational tools (email, repo analysis, PDF generation, publishing workflows) for repeatable, auditable actions</li>
+          <li><strong>Local-Repos-MCP and ProjectSetup-MCP</strong>: scaffolding and compliance enforcement; discovery and launch conventions</li>
+          <li><strong>netops-control-plane</strong>: port governance and service orchestration; policy of dynamic ports to avoid hardcoding</li>
+          <li><strong>Share (Quartz)</strong>: publishing endpoint for shareable artifacts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>
+        <div><strong>Attribution</strong></div>
+        <div>Source canon: <span class="mono">Foundry-Suite/canon/what_is_foundry_suite.md</span></div>
+        <div>Source ref: <span class="mono">c7c2e04d05334b664cd6869dc126ec7e9f7123fd</span></div>
+        <div class="mono">Derived presentation artifact prepared via Comms-Foundry for Quartz.</div>
+      </div>
+      <div class="right">
+        <div class="mono">Suggested publishing location</div>
+        <div class="mono">Share/quartz/static/what-is-foundry-suite.html</div>
+        <div class="mono">Unlinked-only and noindex</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
