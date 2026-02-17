@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Michael Jackson — 1-Pager</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0%200%20128%20128'><rect width='128' height='128' rx='24' fill='%23A100FF'/><text x='64' y='76' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='64' fill='white'>MJ</text></svg>" type="image/svg+xml" />
+  <style>
+    @page { size: 16in 9in; margin: 0.45in; }
+
+    :root {
+      --accent: #A100FF;
+      --text: #111827;
+      --muted: #4b5563;
+      --rule: #e5e7eb;
+      --panel: #f9fafb;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      margin: 0;
+    }
+
+    h1, h2, h3 { margin: 0; }
+
+    .page {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 0.6rem;
+      padding: 0.15in 0.25in;
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .header-left {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 0.6rem;
+    }
+
+    .header-logo {
+      height: 26px;
+      width: auto;
+      opacity: 1;
+      object-fit: contain;
+      align-self: start;
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.05;
+    }
+
+    .headline {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 0.15rem;
+    }
+
+    .meta {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.35;
+    }
+
+    .meta a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .summary {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.25;
+      margin: 0.25rem 0 0.45rem 0;
+    }
+
+    .quadrants {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-rows: auto 1fr;
+      column-gap: 0.7rem;
+      row-gap: 0.95rem;
+      align-items: start;
+    }
+
+    .card {
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 0.55rem 0.6rem;
+      background: #ffffff;
+    }
+
+    .card.accented {
+      border-top: 3px solid var(--accent);
+    }
+
+    .card.panel {
+      background: var(--panel);
+    }
+
+    .card h3 {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1rem;
+    }
+
+    li {
+      font-size: 12px;
+      line-height: 1.25;
+      margin: 0.15rem 0;
+    }
+
+    .strengths {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.45rem 0.7rem;
+    }
+
+    .exec-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exp-card {
+      margin-top: 0.1rem;
+    }
+
+    .exec-main {
+      flex: 1 1 auto;
+    }
+
+    .credentials {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.7rem;
+      border-top: 1px solid var(--rule);
+      padding-top: 0.35rem;
+      margin-top: 0.6rem;
+    }
+
+    .credentials .label {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-weight: 800;
+      margin-bottom: 0.15rem;
+    }
+
+    .credentials .value {
+      font-size: 11.5px;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .bucket-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.15rem;
+    }
+
+    .bucket-items {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.25;
+    }
+
+    .wins {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .wins td {
+      border-top: 1px solid var(--rule);
+      padding: 0.35rem 0;
+      vertical-align: top;
+    }
+
+    .wins tr:first-child td { border-top: none; }
+
+    .win-title {
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .win-impact {
+      font-size: 11.5px;
+      color: var(--muted);
+      margin: 0.1rem 0 0 0;
+      line-height: 1.25;
+    }
+
+    .exp-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      --exp-col-role: 25%;
+      --exp-col-client: 22%;
+      --exp-col-dates: 8%;
+      --exp-col-impact: 45%;
+    }
+
+    .exp-table col.col-role { width: var(--exp-col-role); }
+    .exp-table col.col-client { width: var(--exp-col-client); }
+    .exp-table col.col-dates { width: var(--exp-col-dates); }
+    .exp-table col.col-impact { width: var(--exp-col-impact); }
+
+    .exp-table th {
+      text-align: left;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 0 0 0.25rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .exp-table td {
+      font-size: 11.5px;
+      padding: 0.3rem 0;
+      vertical-align: top;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .role {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .client {
+      color: var(--muted);
+    }
+
+    .dates {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .impact {
+      color: var(--text);
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.7rem;
+      border-top: 1px solid var(--rule);
+      padding-top: 0.35rem;
+      margin-top: 0.6rem;
+    }
+
+    .footer .label {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-weight: 800;
+      margin-bottom: 0.15rem;
+    }
+
+    .footer .value {
+      font-size: 11.5px;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .build-footer {
+      position: fixed;
+      right: 0.45in;
+      bottom: 0.2in;
+      font-size: 10px;
+      color: var(--muted);
+      text-align: right;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.05rem 0.25rem;
+      border-radius: 6px;
+    }
+
+    .journey {
+      position: relative;
+    }
+
+    .journey-intro {
+      font-size: 10.5px;
+      color: var(--muted);
+      line-height: 1.25;
+      margin: 0 0 0.4rem 0;
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
+
+    .journey-list {
+      column-count: 1;
+      column-gap: 0.55rem;
+    }
+
+    .journey-item {
+      break-inside: avoid;
+      padding: 0.1rem 0 0.1rem 0.35rem;
+      border-left: 2px solid var(--rule);
+      margin: 0.1rem 0;
+      position: relative;
+    }
+
+    .journey-item::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      position: absolute;
+      left: -4px;
+      top: 7px;
+    }
+
+    .journey-years {
+      font-size: 10px;
+      color: var(--muted);
+      line-height: 1.1;
+    }
+
+    .journey-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.15;
+      margin-top: 0.05rem;
+    }
+
+    @media (max-width: 1200px) {
+      .quadrants { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .journey-list { column-count: 1; }
+      .credentials { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <div class="header">
+    <div class="header-left">
+      <div>
+        <div class="name">Michael Jackson</div>
+        <div class="headline">AI LLM Technology Architecture — Associate Director</div>
+      </div>
+      
+      <img class="header-logo" src="images/accenture_logo_sm.png" alt="" />
+      
+    </div>
+    <div class="meta">
+      <div>Greater Boston, MA</div>
+      <div><a href="mailto:michael.l.jackson@afs.com">michael.l.jackson@afs.com</a></div>
+      <div><a href="tel:+1 617-286-2684">+1 617-286-2684</a></div>
+      <div>Federal AI Transformation & Governance Leader</div>
+    </div>
+  </div>
+
+  <div class="quadrants">
+    <div class="card accented exec-card">
+      <div class="exec-main">
+        <h3>Executive Summary</h3>
+        <div class="summary">Associate Director focused on AI/LLM technology architecture and enterprise adoption—bringing governance, operating model design, and delivery execution together to turn generative AI into an auditable, repeatable capability. Led AI strategy and automation initiatives for a major DoD program, including an AI strategic plan aligned to NIST AI RMF, TRACE methodology for governed AI-assisted content production, and a TILETS enablement model that achieved >60% workforce AI literacy. Known for translating emerging AI capabilities into secure, practical workflows that improve delivery speed and communication quality.
+</div>
+        <ul>
+          
+          <li>Led AI strategy and governed adoption for mission-critical public-sector programs; delivered measurable productivity gains</li>
+          
+          <li>Designed human-in-the-loop AI operating models aligned to NIST AI RMF, auditability, and delivery execution</li>
+          
+          <li>Built self-hosted and cloud LLM capabilities with usage telemetry and cost governance; deployed Postgres vector and observability foundations for embeddings and analytics</li>
+          
+        </ul>
+
+        <div style="height: 0.45rem;"></div>
+
+        <h3>Core Strengths</h3>
+        <div class="strengths">
+          
+          <div>
+            <div class="bucket-title">AI/LLM</div>
+            <div class="bucket-items">AI Program Governance, AI Operating Model Design, AI Risk And Compliance, Human In The Loop Systems</div>
+          </div>
+          
+          <div>
+            <div class="bucket-title">Delivery</div>
+            <div class="bucket-items">Complex Program Delivery, Governance And Controls, Vendor Management, Metrics And Outcomes Management</div>
+          </div>
+          
+          <div>
+            <div class="bucket-title">Domains</div>
+            <div class="bucket-items">Defense, Public Sector, Healthcare Payer, Contact Center</div>
+          </div>
+          
+          <div>
+            <div class="bucket-title">Tools</div>
+            <div class="bucket-items">Windsurf, Model Context Protocol, LLM Prompting, LLMOps, Postgres, Vector Storage, Observability, Jira</div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="credentials">
+        <div>
+          <div class="label">Education</div>
+          <div class="value">
+            
+            <div>United States Military Academy at West Point — B.S., Engineering, Computer Science</div>
+            
+            <div>Bowie State University (University of Maryland European Division) — M.S., Management Information Systems</div>
+            
+          </div>
+        </div>
+        <div>
+          <div class="label">Certifications</div>
+          <div class="value">
+            
+            <div>Certified Delivery Professional — Accenture (2025)</div>
+            
+          </div>
+        </div>
+        <div>
+          <div class="label">Selected Training</div>
+          <div class="value">
+            
+            <div>Working with Governments (FY25/FY26) (Dec 25)</div>
+            
+            <div>AFS Competing Fairly - Short Take (FY25) (Dec 25)</div>
+            
+            <div>Accelerating AI Mastery: Role-Based DeepLearning.AI Certifications (Nov 25)</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="journey card panel accented">
+      <h3>Career Journey</h3>
+      
+      <div class="journey-intro">Executive quick-sizing narrative of progression and breadth</div>
+      
+      <div class="journey-grid">
+        <div class="journey-list">
+          
+          <div class="journey-item">
+            <div class="journey-years">1981-1985</div>
+            <div class="journey-title">Military Academy Foundations: Leadership and Engineering Discipline</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">1985-1991</div>
+            <div class="journey-title">Combat Arms Officer: Leading Under Real Stakes</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">1991-mid-1990s</div>
+            <div class="journey-title">Deep Technical Operator: Unix, TCP/IP, and Early Internet Systems</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">mid-1990s</div>
+            <div class="journey-title">Web Engineering, Network Management, and CASE-Driven Design Discipline</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">1995-2001</div>
+            <div class="journey-title">USAF Technology Services at Scale: Large Program Office Leadership</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">2001-2008</div>
+            <div class="journey-title">PMO Builder: Portfolio Delivery Governance and Turnarounds</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">2008-2013</div>
+            <div class="journey-title">Account and Operations Executive: Fixed-Price Delivery and Profitability</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">2013-2016</div>
+            <div class="journey-title">Healthcare Software Services Executive: Customer Success and Production Outcomes</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">2016-2019</div>
+            <div class="journey-title">Public Sector Delivery Leadership and Enterprise Architecture</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">2020-2021</div>
+            <div class="journey-title">Crisis Response, Command Centers, and Rapid Delivery</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">2021-2025</div>
+            <div class="journey-title">Complex Program Delivery Leadership in Regulated Environments</div>
+          </div>
+          
+          <div class="journey-item">
+            <div class="journey-years">2025-present</div>
+            <div class="journey-title">AI Transformation, Governance, and Human-in-the-Loop Operating Models</div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="card exp-card">
+      <h3>Selected Experience</h3>
+      <table class="exp-table" style="--exp-col-role: 34%; --exp-col-client: 0%; --exp-col-dates: 0%; --exp-col-impact: 66%;">
+        <colgroup>
+          <col class="col-role" />
+          <col class="col-impact" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>
+              <div class="role">AI and Innovation Lead — Accenture</div>
+            </td>
+            <td class="impact" title="Authored AI Strategic Plan (&#34;Sharpen the Axe&#34;) with a Crawl–Walk–Run maturity model aligned to NIST AI RMF">Authored AI Strategic Plan ("Sharpen the Axe") with a Crawl–Walk–Run maturity model aligned to NIST AI RMF</td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="role">AI Learning & Experimentation (Parallel Track) — Accenture</div>
+            </td>
+            <td class="impact" title="Designed and implemented Intent Foundry, an AI-accelerated preparation system that converts human intent into decision-grade, traceable synthesis and execution-ready artifacts through staged HITL collaboration">Designed and implemented Intent Foundry, an AI-accelerated preparation system that converts human intent into decision-grade, traceable synthesis and execution-ready artifacts through staged HITL collaboration</td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="role">AI Practitioner (Internal Assignment) — Accenture</div>
+            </td>
+            <td class="impact" title="Completed AI Practitioner upskilling and earned Accenture Certified Delivery Professional (CDP) certification">Completed AI Practitioner upskilling and earned Accenture Certified Delivery Professional (CDP) certification</td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="role">Program Delivery Lead — Accenture</div>
+            </td>
+            <td class="impact" title="Owned project management controls and tooling, maintaining detailed plans, estimates, and progress tracking to enable effective leadership oversight">Owned project management controls and tooling, maintaining detailed plans, estimates, and progress tracking to enable effective leadership oversight</td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="role">Service Delivery Lead — Accenture</div>
+            </td>
+            <td class="impact" title="Owned fixed-price service delivery and day-to-day operations for a contact center organization scaled to 300+ personnel">Owned fixed-price service delivery and day-to-day operations for a contact center organization scaled to 300+ personnel</td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="role">Delivery Lead — Accenture</div>
+            </td>
+            <td class="impact" title="Led a six-month assessment to remediate third-party vendor performance issues for a statewide program">Led a six-month assessment to remediate third-party vendor performance issues for a statewide program</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card accented">
+      <h3>Signature Proof</h3>
+      <table class="wins">
+        <tbody>
+          
+          <tr>
+            <td>
+              <div class="win-title">Shipped TRACE-Loop-Lite v0.1.3: Traceable AI Workflow and Publishing</div>
+              <div class="win-impact">Expanded a staged, human-in-the-loop workflow for traceable AI-assisted knowledge work, producing stakeholder-ready artifacts across multiple formats</div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="win-title">Built Idea-Foundry Governance Automation and Self-Improvement Daemon</div>
+              <div class="win-impact">Implemented a self-improvement daemon to drive continuous refinement across a multi-repo Foundry Suite (backlog management, compliance checks, and repeatable publishing patterns)</div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="win-title">Hardened Intent-Foundry LLM Execution for Reliable Runs</div>
+              <div class="win-impact">Implemented model discovery and listing to support reliable run configuration across local and cloud providers</div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <div class="win-title">Implemented LLM Registry and Cost Governance Across Providers</div>
+              <div class="win-impact">Implemented an LLM usage registry to track requests and cost across local inference and cloud providers (Ollama, OpenAI, Gemini), enabling attribution and spend management across a multi-repo Foundry Suite (≈15 cooperating repos)</div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div class="build-footer"><a href="https://michaelljackson101.github.io/Share/static/CVFoundry.html">CV-Foundry</a> v0.1.6 — 2026-02-17 (rev b4eb1601dc)</div>
+
+</body>
+</html>
