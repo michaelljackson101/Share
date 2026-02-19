@@ -15,6 +15,7 @@ This digital garden is the primary publish surface.
 
 - [[Notes/Governance]]
 - [[Notes/Architecture]]
+- [[Foundry-Suite/what-is-foundry-suite|What is Foundry-Suite]]
 
 ## Public posture
 
