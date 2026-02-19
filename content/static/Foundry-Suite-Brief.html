@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Foundry-Suite Brief</title>
+    <style>
+      :root {
+        --fg: #111;
+        --muted: #555;
+        --bg: #fff;
+        --card: #f6f7f9;
+        --border: #e6e8eb;
+        --link: #0b57d0;
+        --code-bg: #0b1020;
+        --code-fg: #e6edf3;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fg: #e6edf3;
+          --muted: #9aa4af;
+          --bg: #0b1020;
+          --card: #111827;
+          --border: #253046;
+          --link: #78a6ff;
+          --code-bg: #070a14;
+          --code-fg: #e6edf3;
+        }
+      }
+      body {
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        line-height: 1.6;
+        color: var(--fg);
+        background: var(--bg);
+        margin: 0;
+        padding: 24px;
+      }
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .hero {
+        padding: 18px 18px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: linear-gradient(180deg, var(--card), transparent);
+        margin-bottom: 18px;
+      }
+      .brand {
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+      h1 {
+        margin: 0 0 6px 0;
+        font-size: 26px;
+        line-height: 1.25;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      a {
+        color: var(--link);
+      }
+      pre {
+        background: var(--code-bg);
+        color: var(--code-fg);
+        padding: 12px;
+        overflow-x: auto;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 0.95em;
+      }
+      details {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 10px 12px;
+        background: var(--card);
+        margin: 12px 0;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid var(--border);
+        margin: 22px 0;
+      }
+      .footer {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      @media print {
+        body {
+          padding: 0;
+        }
+        .hero {
+          border: 0;
+          background: transparent;
+          padding: 0;
+        }
+        details {
+          border: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <div class="brand">
+          Comms-Foundry — Portable HTML Export
+        </div>
+        <h1>Foundry-Suite Brief</h1>
+        <div class="meta">
+          2026-02-19 • mode=marketing
+        </div>
+        
+      </div>
+
+      <div>
+        <h1>Foundry-Suite Brief</h1>
+<h2>What it is</h2>
+<p>Foundry-Suite is a local-first, federated set of tools and conventions for doing knowledge work with AI beside you.</p>
+<p>It is designed around a simple idea:</p>
+<ul>
+<li><strong>Artifacts are the unit of progress.</strong></li>
+</ul>
+<p>Instead of chats disappearing into history, Foundry-Suite emphasizes producing concrete outputs you can review, version, share, and reuse.</p>
+<h2>What it’s for</h2>
+<p>If you regularly do any of the following, Foundry-Suite is meant to help:</p>
+<ul>
+<li><strong>Turn messy inputs into durable outputs</strong></li>
+<li><strong>Move from idea to execution without losing context</strong></li>
+<li><strong>Keep provenance, evidence, and decisions attached to the work</strong></li>
+<li><strong>Federate work across multiple tools and repositories</strong></li>
+</ul>
+<h2>The operating principles</h2>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>What it means</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artifact-first</td>
+<td>Write things down as deliverables</td>
+<td>Produces shareable progress</td>
+</tr>
+<tr>
+<td>Human-in-the-loop</td>
+<td>You stay the editor and approver</td>
+<td>Prevents silent automation failures</td>
+</tr>
+<tr>
+<td>Provenance-first</td>
+<td>Attach sources, inputs, and rationale</td>
+<td>Enables trust and auditability</td>
+</tr>
+<tr>
+<td>Federation over monolith</td>
+<td>Compose small tools via interfaces</td>
+<td>Keeps the system adaptable</td>
+</tr>
+<tr>
+<td>Local-first by default</td>
+<td>Keep the workshop close to you</td>
+<td>Reduces friction and fragility</td>
+</tr>
+</tbody>
+</table>
+<h2>The lifecycle spine</h2>
+<p>Foundry-Suite aligns tools around a repeatable lifecycle for knowledge work:</p>
+<ol>
+<li><strong>Learn</strong>: gather context, sources, notes</li>
+<li><strong>Ideate</strong>: shape possibilities and options</li>
+<li><strong>Intent</strong>: decide what to build and how</li>
+<li><strong>Build</strong>: implement and package outputs</li>
+<li><strong>Publish</strong>: distribute artifacts to the right places</li>
+</ol>
+<h2>What’s inside</h2>
+<p>Foundry-Suite is intentionally modular. A “foundry” is a focused workshop for one stage of work.</p>
+<p>Examples of workshops and supporting capabilities:</p>
+<ul>
+<li><strong>Idea capture and refinement</strong></li>
+<li><strong>Intent specification and traceable execution</strong></li>
+<li><strong>Comms publishing pipelines</strong></li>
+<li><strong>Registries and conventions</strong></li>
+<li><strong>MCP-connected tooling for automation and integration</strong></li>
+</ul>
+<h2>What makes the outputs different</h2>
+<p>Foundry-Suite aims to make outputs:</p>
+<ul>
+<li><strong>Readable by humans</strong> (clean structure, skimmable summaries)</li>
+<li><strong>Executable by tools</strong> (frontmatter/config as contracts)</li>
+<li><strong>Reviewable</strong> (guardrails, safety latches, explicit approvals)</li>
+<li><strong>Portable</strong> (single-file HTML artifacts where helpful)</li>
+</ul>
+<h2>A quick tour</h2>
+<p>Start with these concepts:</p>
+<ul>
+<li><strong>A suite is not a single app</strong>. It’s a set of interoperable workshops.</li>
+<li><strong>Governance matters</strong>. Naming, schemas, and publishing rules are part of the product.</li>
+<li><strong>Interfaces come first</strong>. Tools should compose without tight coupling.</li>
+</ul>
+<h2>Appendix</h2>
+<details>
+<summary>Suggested “elevator pitch” variants</summary>
+
+- Foundry-Suite is a local-first AI workbench where progress is measured in artifacts, not chats.
+- Foundry-Suite is a federated set of workshops for turning context into published deliverables.
+- Foundry-Suite is an operating system for knowledge work: learn, ideate, decide, build, publish.
+
+</details>
+
+<details>
+<summary>YAML contract example</summary>
+
+
+<details><summary>YAML</summary><pre><code class="language-yaml">title: Foundry-Suite Brief
+date: 2026-02-19
+publish:
+  quartz: false
+  external_html:
+    enabled: true
+    mode: marketing
+safety:
+  reviewed: true
+</code></pre></details>
+
+
+</details>
+      </div>
+
+      <hr />
+      <div class="footer">
+        Generated by Comms-Foundry.
+        
+      </div>
+    </div>
+  </body>
+</html>
