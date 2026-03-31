@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Update: What is Foundry-Suite (2026-03-31)</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%231f4fd8%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2741%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-size%3D%2730%27%20font-weight%3D%27900%27%20fill%3D%27white%27%3EUW%3C/text%3E%3C/svg%3E" />
+    
+    <style>
+      :root {
+        --accent: #1f4fd8;
+        --text: #111827;
+        --muted: #4b5563;
+        --rule: #e5e7eb;
+        --bg: #ffffff;
+        --panel: #f9fafb;
+        --code-bg: #0b1020;
+        --code-fg: #e6edf3;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        margin: 0;
+        padding: 0;
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 42px 28px 54px 28px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        align-items: start;
+        padding-bottom: 18px;
+        border-bottom: 2px solid var(--rule);
+        margin-bottom: 22px;
+      }
+
+      .brand {
+        display: grid;
+        gap: 6px;
+      }
+
+      .brand-title {
+        font-size: 34px;
+        font-weight: 900;
+        line-height: 1.05;
+        color: var(--accent);
+        margin: 0;
+      }
+
+      .brand-tagline {
+        font-size: 15px;
+        font-weight: 650;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .brand-subtitle {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.35;
+        margin: 0;
+      }
+
+      .card {
+        border: 1px solid var(--rule);
+        border-radius: 12px;
+        background: var(--panel);
+        padding: 16px 16px;
+      }
+
+      .card.white {
+        background: #ffffff;
+      }
+
+      h1 {
+        margin: 0 0 10px 0;
+        font-size: 22px;
+        line-height: 1.25;
+      }
+
+      h2 {
+        margin: 0 0 10px 0;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 900;
+        border-top: 3px solid var(--accent);
+        padding-top: 10px;
+      }
+
+      h3 {
+        margin: 14px 0 8px 0;
+        font-size: 14px;
+        font-weight: 900;
+        color: var(--text);
+      }
+
+      p {
+        margin: 0 0 10px 0;
+        font-size: 13.5px;
+        line-height: 1.45;
+        color: var(--text);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+
+      li {
+        margin: 6px 0;
+        font-size: 13.5px;
+        line-height: 1.35;
+        color: var(--text);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 14px 0;
+        font-size: 13px;
+      }
+      th, td {
+        border: 1px solid var(--rule);
+        padding: 10px 10px;
+        vertical-align: top;
+      }
+      th {
+        background: #ffffff;
+        font-weight: 900;
+        text-align: left;
+      }
+
+      pre {
+        background: var(--code-bg);
+        color: var(--code-fg);
+        padding: 12px;
+        overflow-x: auto;
+        border-radius: 10px;
+        border: 1px solid var(--rule);
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 0.95em;
+      }
+      details {
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+        padding: 10px 12px;
+        background: #ffffff;
+        margin: 12px 0;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid var(--rule);
+        margin: 22px 0;
+      }
+      .footer {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      @media print {
+        body {
+          padding: 0;
+        }
+        details {
+          border: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="topbar">
+        <div class="brand">
+          <h1 class="brand-title">Update: What is Foundry-Suite (2026-03-31)</h1>
+          
+          <p class="brand-subtitle">2026-03-31 • mode=branded</p>
+        </div>
+      </div>
+
+      <div class="card white">
+        <h1>Update: What is Foundry-Suite?</h1>
+<h2>Ecosystem Expansion</h2>
+<p>The Foundry-Suite ecosystem has undergone significant growth since the last canon update (v0.3.6 on 2026-03-20). This handoff requests an update to the canonical narrative to reflect:</p>
+<ul>
+<li>A new default communications control plane, Liaison-Foundry, with a Postgres actor database and hardened alias governance</li>
+<li>Major upgrades to Document-Foundry and Slide-Foundry, including LangGraph agentic pipelines and visual generation capabilities</li>
+</ul>
+<h2>New Foundries</h2>
+<p>Several new foundries have been added to the ecosystem:</p>
+<ul>
+<li><strong>Digest-Foundry</strong>: Automated research digestion using Tavily, Ollama, and LangGraph</li>
+<li><strong>Network-Foundry</strong>: VLAN/DNS governance, Pi-hole management, and firmware auditing</li>
+<li><strong>MCP-Foundry</strong>: MCP configuration management and validation</li>
+</ul>
+<h2>Registry MCP</h2>
+<p>A new Registry MCP has been introduced, providing authoritative access to suite registries and nominations:</p>
+<ul>
+<li>Authoritative read-only access to suite.yaml, services.yaml, foundry_architecture.yaml</li>
+<li>Write-gated nominations for registry changes</li>
+<li>Integrated into Foundry-Suite Overview Streamlit UI</li>
+</ul>
+<h2>Key Highlights</h2>
+<h3>Liaison-Foundry</h3>
+<ul>
+<li>AI-native communications control plane</li>
+<li>Centralized Postgres actor database</li>
+<li>Fastmail JMAP native orchestration</li>
+<li>Hardened alias governance (no-send policy)</li>
+<li>Default for outbound email (Agentic-MCP email deprecated)</li>
+</ul>
+<h3>Document-Foundry Upgrades</h3>
+<ul>
+<li>LangGraph agentic synthesis (<code>document_foundry_agentic_decompose</code>)</li>
+<li>Visual tags for Chart.js/Mermaid generation</li>
+<li>Headless Chromium PDF export with PII redaction</li>
+<li>Telemetry and lineage tracking</li>
+</ul>
+<h3>Slide-Foundry Upgrades</h3>
+<ul>
+<li>Semantic archetype routing (LangGraph)</li>
+<li>Editorial deck rewriting (<code>slides_editorial_deck</code>, <code>slides_agentic_deck</code>)</li>
+<li>Chart.js visualization generation from ````chart blocks</li>
+<li>Obsidian inbox/outbox async pipeline</li>
+</ul>
+<h2>Publishing Instructions</h2>
+<p>To update the canonical narrative:</p>
+<ul>
+<li>Update <code>canon/what_is_foundry_suite.md</code></li>
+<li>Bump version to 0.3.7 (or higher)</li>
+<li>Use Comms-Foundry to publish to Quartz and sync GitHub Pages</li>
+<li>Ensure external links (if any) are correct</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>Liaison-Foundry is not yet in suite.yaml/services.yaml; decide whether to add it now or wait</li>
+<li>Preserve existing tone and structure</li>
+<li>Keep human-in-the-loop and artifact-first principles prominent</li>
+<li>After publication, update any cross-references in other canon docs if needed</li>
+</ul>
+<p>Tags: Foundry-Suite, Liaison-Foundry, Document-Foundry, Slide-Foundry, Digest-Foundry, Network-Foundry, MCP-Foundry, Registry MCP</p>
+      </div>
+
+      <hr />
+      <div class="footer">
+        <div>Generated by Comms-Foundry — Portable HTML Export.</div>
+        
+      </div>
+    </div>
+  </body>
+</html>
