@@ -1,6 +1,6 @@
 ---
 title: AI Notes
-draft: false
+draft: true
 tags:
   - ai
 ---

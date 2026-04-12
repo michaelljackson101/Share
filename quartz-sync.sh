@@ -25,4 +25,8 @@ if [[ -z "$msg" ]]; then
   msg="Quartz sync: $ts"
 fi
 
+# Load NVM for programmatic runs (like cron or subprocess)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 npm -s run quartz -- sync -m "$msg"

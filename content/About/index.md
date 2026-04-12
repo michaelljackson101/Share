@@ -18,7 +18,7 @@ If you’d like to connect, email me at Michael.Jackson@POBox.com.
 - [[Foundry-Suite]]
 - [[Notes/AI]]
 
-## Career artifacts
+## CV-Foundry Lite Artifacts
 
-- Resume: https://michaelljackson101.github.io/Share/static/Resume.html
+- CV/Resume: https://michaelljackson101.github.io/Share/static/Resume.html
 - One-pager: https://michaelljackson101.github.io/Share/static/OnePager.html

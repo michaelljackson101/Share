@@ -1,6 +1,6 @@
 ---
 title: Architecture Notes
-draft: false
+draft: true
 tags:
   - ea
   - enterprise_architecture
