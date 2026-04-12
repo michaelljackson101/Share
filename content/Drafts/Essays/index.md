@@ -1,6 +1,6 @@
 ---
 title: Essays
-draft: false
+draft: true
 tags:
   - essays
 ---

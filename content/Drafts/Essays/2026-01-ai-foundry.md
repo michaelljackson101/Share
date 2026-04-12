@@ -1,6 +1,6 @@
 ---
 title: Intent Foundry
-draft: false
+draft: true
 tags:
   - sdlc
   - ai

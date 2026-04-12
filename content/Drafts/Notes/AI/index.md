@@ -1,6 +1,6 @@
 ---
-title: AI Notes
-draft: true
+title: About Me
+draft: false
 tags:
   - ai
 ---

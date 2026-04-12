@@ -1,6 +1,6 @@
 ---
 title: Foundry Suite
-draft: false
+draft: true
 tags:
   - foundry_suite
   - governance
