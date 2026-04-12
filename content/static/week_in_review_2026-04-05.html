@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>week_in_review_2026-04-05</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css" id="theme">
+    
+    <!-- Brand Foundry Google Fonts Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css">
+    
+    <style>
+    :root {
+      --r-background-color: #191919;
+      --r-main-color: #ffffff;
+      --r-heading-color: #ffffff;
+      --r-link-color: #3498db;
+      --r-selection-background-color: #3498db;
+      --r-heading1-size: 2.2em;
+      --r-heading2-size: 1.6em;
+      --r-heading3-size: 1.3em;
+      --r-main-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --r-heading-font: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --r-code-font: 'Fira Code', 'Courier New', monospace;
+    }
+
+
+      /* Inject Slide-Foundry custom styling overrides (e.g. left-align, base64 images) */
+      .reveal img {
+         max-width: 90%;
+         max-height: 100%;
+         margin: 0 auto;
+         display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n--\r?\n$" data-separator-notes="^Note:">
+          <textarea data-template>
+<style>
+.reveal p, .reveal li, .reveal footer {
+    text-align: left !important;
+}
+.reveal ul, .reveal ol {
+    display: block !important;
+    text-align: left !important;
+    padding-left: 40px !important;
+}
+.reveal .slides section {
+    text-align: left !important;
+    align-items: flex-start !important;
+}
+.reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal blockquote, .reveal blockquote p {
+    text-align: left !important;
+    width: 100% !important;
+}
+.reveal h1 {
+    text-align: center !important;
+    width: 100% !important;
+    background: -webkit-linear-gradient(45deg, #0ba360 0%, #3cba92 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.reveal blockquote {
+    background: rgba(40, 59, 149, 0.1) !important;
+    border-left: 5px solid #17b2c3 !important;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+    padding: 20px !important;
+}
+.reveal table {
+    width: 100% !important;
+    font-size: 0.8em !important;
+    margin: 20px 0 !important;
+    border-collapse: collapse !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+}
+.reveal th, .reveal td {
+    text-align: left !important;
+    padding: 12px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.reveal .mermaid svg, .reveal .mermaid-prerendered svg {
+    max-width: 100% !important;
+    max-height: 65vh !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 auto !important;
+}
+</style>
+
+# Foundry Suite – Week in Review (Fri 2026-04-03 → Sun 2026-04-05)
+
+---
+
+## Executive Highlights
+
+- Centralized environment and telemetry foundation advancing across the suite.
+- Telemetry and compliance tracking stood up via LLM-Registry with Postgres backend and Streamlit dashboard.
+- Prompt-Foundry gained file uploads with pre-send redaction; documentation and UX hardened.
+- Intent-Foundry expanded handoff machinery and catalogs; Schedule-Foundry and Chat-Foundry handoffs prepared.
+- Search-Foundry simplified to a focused Data Engine; removed conversational UI.
+- NetOps registry pruned; cleaner port governance.
+- Idea-Foundry finalized AWS Foundry intent package seed.
+
+---
+
+## Repository Highlights (since 2026-04-03)
+
+### LLM-Registry
+- 0b59a25 (2026-04-05) fix: route Streamlit configuration and usage tracking to central .env and postgres db
+- 292d242 (2026-04-05) chore: migrate telemetry database from SQLite to centralized PostgreSQL array
+- d39cac1 (2026-04-05) feat: Add telemetry logging endpoint, Streamlit dashboard, and compliance tracking
+
+Key capability:
+- Suite-wide telemetry to Postgres, enabling cross-repo dashboards and compliance visibility.
+
+### Prompt-Foundry
+- 6614e36 (2026-04-04) chore: finalize 0.3.0 documentation and UI updates
+- a4fcd7e (2026-04-04) docs: document chat uploads + pre-send redaction; bump capability report; changelog
+- fa97fca (2026-04-04) feat(chat): add file uploads and pre-send redaction (Parser-Foundry first, local regex fallback)
+- 2b87e60 (2026-04-04) chore(prompts): normalize prompts to Markdown; reorganize announcements
+- b479486 (2026-04-04) chore(env): prefer shared home env (~/.foundry-suite/.env.shared); ui_start sources shared env first; update .env.example
+
+Key capability:
+- Safer input handling with pre-send redaction; consistent environment bootstrap across workstations.
+
+### Intent-Foundry
+- 1429782 (2026-04-04) feat(web-foundry): new run catalog entries, intent + HITL Q/A + decision/doc sets; package; export+register handoff to Build-Foundry
+- e25b1a2 (2026-04-04) feat: Develop and handoff Schedule-Foundry and Chat-Foundry
+
+Key capability:
+- Stronger upstream intent packaging and cross-foundry handoff pipeline.
+
+### Search-Foundry
+- e04f3b2 (2026-04-05) refactor: strip conversational UI and AI synthesis features
+- cef0c75 (2026-04-05) refactor: remove Chat functionality; refine to Data Engine
+
+Key capability:
+- Tighter scope for reliability and performance as a data engine.
+
+### netops-control-plane
+- f4addbf (2026-04-05) chore: remove archived MCP-Console-UI port bookings
+
+Key capability:
+- Cleaner port registry, reducing conflicts and drift.
+
+### Idea-Foundry
+- a6d9fa6 (2026-04-05) feat(aws-foundry): finalize idea notes and intent submission
+
+Key capability:
+- Seeded AWS Foundry concept into intent pipeline.
+
+### Manage-Foundry
+- 96854e6 (2026-04-03) chore: auto-sync local workstation state
+
+Context:
+- Ongoing cockpit improvements; UX/streamlit compliance and optional Postgres overlay landed previously.
+
+---
+
+## Cross-Cutting Themes
+
+- Environment management converging on shared home `.env`.
+- Postgres emerging as the suite’s communication/telemetry bus.
+- Handoff rigor increasing (catalogs, packaging, export/registration).
+- UX hygiene and docs maturation across UIs.
+
+## Risks / Watch-outs
+
+- Ensure consistent Postgres credentials and network accessibility across workstations.
+- Keep redaction libraries and patterns tested against edge cases.
+- Validate port governance as more UIs come online; avoid collisions.
+
+## Recommended Next Focus
+
+- Expand telemetry integration to remaining UIs (dashboards for health/compliance).
+- Solidify shared `.env` via Local-Repos-MCP automation on all machines.
+- Pilot federated active_services registry and navigation.
+- Advance Schedule-Foundry orchestration and HITL loops.
+
+---
+
+## Questions & Next Steps
+<!-- .slide: data-background-image="" data-background-color="#111111" -->
+
+<br><br><br><br>
+<p style="text-align:center; font-size: 0.7em; margin-top:20px; font-family: 'Fira Code', monospace; line-height:1.4;">
+  Calling Entity: <strong>Imagination-Foundry</strong><br>
+  Deck Title: <strong>Foundry Suite – Week in Review (Fri 2026-04-03 → Sun 2026-04-05)</strong><br>
+  <br>
+  <span style="opacity: 0.6;">
+    <em>Assembled by <strong>Slide-Foundry</strong></em><br>
+    <em>Powered by the <strong>Foundry-Suite</strong> Architecture</em>
+  </span>
+</p>
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/plugin.js"></script>
+    <script>
+      // Initialize Reveal.js and specify the plugins
+      Reveal.initialize({
+        hash: true,
+        width: 1920,
+        height: 1080,
+        margin: 0.04,
+        controls: true,
+        showNotes: false,
+        menu: {
+            side: 'left',
+            numbers: false,
+            markers: true,
+            themes: false,
+            transitions: false
+        },
+        chalkboard: {
+            boardmarkerWidth: 3,
+            chalkWidth: 7,
+            chalkEffect: 1.0,
+            toggleChalkboardButton: true,
+            toggleNotesButton: true
+        },
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu, RevealChalkboard ],
+      });
+    </script>
+    
+  </body>
+</html>
