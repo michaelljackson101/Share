@@ -7,8 +7,9 @@ tags:
 This page is a short snapshot of what I’m focusing on right now.
 ## Active Developments (Automated Pulse)
 
-*Last updated: 2026-04-12*
+*Last updated: 2026-04-13*
 
-- **Architectural hardening** across **Assessment-Foundry** and **Prompt-Foundry** enhanced prompt resilience and automation, while **Intent-Foundry** refined governance frameworks for secure intent handoffs.  
-- **Pipeline automation** advanced in **Manage-Foundry** with artifact generation and **Idea-Foundry**’s scalable scaffolding, streamlining cross-Foundry collaboration.  
-- **Infrastructure scaling** optimizations in **Obsidian-Foundry** and **Learning-Foundry** improved vault resilience and learning run efficiency, supporting broader operational demands.
+- Assessment-Foundry advanced pipeline automation with enhanced transcript processing and schema validation, alongside architectural hardening of aggregation logic.  
+- Prompt-Foundry scaled infrastructure through standardized script renaming and MCP integration, while refining announcement publishing workflows.  
+- Imagination-Foundry strengthened architectural foundations with refined routing constraints and daemon pipeline enhancements.
+
