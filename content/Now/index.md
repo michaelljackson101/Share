@@ -60,9 +60,9 @@ This page is a short snapshot of what I’m focusing on right now.
 
 ## Active Developments (Automated Pulse)
 
-*Last updated: 2026-04-17*
+*Last updated: 2026-04-18*
 
-- **TRACE-Foundry** advanced architectural hardening through refactoring and pipeline automation of prompt libraries.  
-- **AI_Strategic_Plan** and **Search-Foundry** scaled infrastructure with modernization pipelines and shared environment integration.  
-- **Imagination-Foundry** and **Comms-Foundry** enhanced system resilience through advanced routing daemons and campaign tracking integration.
+- **Intent-Foundry** advanced architectural hardening and pipeline automation through refined artifacts and enhanced handoff processes.  
+- **TRACE-Foundry** and **Prompt-Foundry** strengthened infrastructure scaling and pipeline automation with durable reporting, Quartz integration, and LLM-as-a-judge loops.  
+- **AI_Strategic_Plan** and **Imagination-Foundry** prioritized pipeline automation and infrastructure scaling via modernization scaffolding and daemon-driven workflows.
 
