@@ -12,6 +12,11 @@ This page provides an automated daily roundup of artificial intelligence news, s
 
 ## Latest Digests
 
+### [2026-04-25] Latest Reads
+
+- **[Research: Michie Hisada](https://google.com/search?q=Michie%20Hisada)** - **Summary:**  
+Michie Hisada is a prominent epidemiologist specializing in viral epidemiology. Her research has been recognized with awards, particularly for her work on T-cell non-Hodgkin lymphoma.
+
 ### [2026-04-24] Latest Reads
 
 - **[Local LLMs changed how I use Home Assistant, and now my smart devices actually listen](https://www.xda-developers.com/local-llms-changed-how-i-use-home-assistant/)** - Here's a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
@@ -183,75 +188,4 @@ The original article titled *"Anthropic, OpenAI, Google, and Microsoft agree tha
 
 **Main Points:**  
 1. **JFrog Overview:** JFrog is a DevOps platform provider, best known for its **Artifactory** product, which serves as a universal repository manager for software artifacts.
-
-### [2026-04-18] Latest Reads
-
-- **[The AI Leadership Imperative](https://hbr.org/2026/04/the-ai-leadership-imperative)** - **Comprehensive Summary of "The AI Leadership Imperative"**  
-**Author:** Adi Ignatius | **Publication:** Harvard Business Review | **Date:** April 17, 2026  
-
----
-
-### **Main Points**  
-1. **AI as a Transformative Force**: The article emphasizes that artificial intelligence (AI) is no longer a futuristic concept but a critical driver of innovation and disruption across industries.
-- **[5 Questions Leaders Should Ask Before Turning to Fractional Work](https://hbr.org/2026/04/5-questions-leaders-should-ask-before-turning-to-fractional-work)** - Here is a revised summary that addresses the missing points and enhances completeness, accuracy, and clarity:
-
-**Title:** Navigating the Future of Work: 5 Questions Leaders Should Ask Before Turning to Fractional Work
-
-**Summary:**
-
-As AI continues to transform the workforce, senior leaders are facing unprecedented uncertainty about their job prospects. Amidst the relentless onslaught of AI-related layoff news, experienced leaders are feeling less agency and more layoff anxiety.
-- **[AI lowered the cost of building software. Enterprise governance hasn’t caught up | VentureBeat](https://venturebeat.com/infrastructure/ai-lowered-the-cost-of-building-software-enterprise-governance-hasnt-caught)** - Here's a refined summary that improves on the original:
-
-**The Build vs. Buy Shift: A New Era for Software Development**
-
-The cost of building software has plummeted to zero due to AI-assisted development and enterprise app-building platforms.
-- **[I spent a month with Cursor, Google Antigravity, and Windsurf – and there is a clear winner](https://www.xda-developers.com/spent-month-with-cursor-google-antigravity-windsurf-to-find-real-pro-choice/)** - Here's a refined summary that improves upon the original:
-
-**Title:** AI-Powered IDE Showdown: Cursor, Google Antigravity, and Windsurf Compared
-
-**Background:** Parth Shah, a seasoned tech writer, spent 30 days testing three AI-powered development environments - Cursor, Google Antigravity, and Windsurf - to determine which one excels in coding efficiency. **Cursor Review:**
-
-* **Predictive Editing**: Cursor boasts refined predictive editing capabilities with its Composer 2 engine.
-- **[The TL;DR on MCP: Why Context Matters and How to Put It to Work | Figma Blog](https://www.figma.com/blog/the-tldr-on-mcp/)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
-
-**The TL;DR on MCP: Why Context Matters and How to Put It to Work**
-
-Multichannel Content Planning (MCP) requires context to ensure that content resonates with the target audience across different channels. The article "The TL;DR on MCP: Why Context Matters and How to Put It to Work" highlights the importance of incorporating context into your MCP strategy.
-- **[5 useful things I do with a local LLM on my phone](https://www.makeuseof.com/useful-things-i-do-with-a-local-llm-on-my-phone/)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
-
-**Embracing Local Large Language Models: 5 Practical Uses on Your Phone**
-
-The article by Oluwademilade Afolabi highlights the benefits of using local Large Language Models (LLMs) on your phone, rather than relying on cloud-based AI services like ChatGPT. By running a small LLM locally, users can enjoy increased privacy, convenience, and practicality for everyday tasks.
-- **[I tried multiple self-hosted dashboards but keep coming back to Glance](https://www.xda-developers.com/i-tried-multiple-self-hosted-dashboards-but-glance-is-better/)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
-
-**Title:** A Comprehensive Review of Self-Hosted Dashboards: Why Glance Stands Out as the Top Choice
-
-**Introduction:**
-
-Abhishek Kumar Mishra, a seasoned writer and self-hosting enthusiast with over 8 years of experience in writing about computing and technology, shares his in-depth review of multiple self-hosted dashboards. As an author at XDA who covers computing, Abhishek has a deep understanding of the benefits and challenges of using self-hosted tools, including data security, customization, and cost-effectiveness.
-- **[I tried Claude Design for half an hour. I’m already locked out for a week | PCWorld](https://www.pcworld.com/article/3117811/i-tried-claude-design-for-half-an-hour-im-already-locked-out-for-a-week.html)** - **Anthropic's Claude Design: A Powerful but Token-Hungry AI Tool**
-
-Ben Patterson from PCWorld recently tested Anthropic's new AI tool, Claude Design, which creates web prototypes, app wireframes, and marketing materials from text prompts. In this article, we'll explore the key features and capabilities of Claude Design, as well as the author's experience with the tool.
-- **[I connected my local LLM to my browser and it changed how I automated tasks](https://www.xda-developers.com/connected-local-llm-browser-changed-how-automated-tasks/)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
-
-**Title:** Simplifying Automation with Local Large Language Models (LLMs)
-
-**Summary:**
-
-Anurag Singh, an experienced journalist and author, shares his experience of connecting a local LLM to his browser, which significantly improved his automation tasks. He used Ollama, a platform for downloading and running open-source LLMs on a local computer, to host a Qwen model on his MacBook M5.
-- **[YFQ-44 Fury Fighter Drone Wraps Contested Operations Test That Could Accelerate Its Fielding](https://www.twz.com/air/yfq-44-fury-fighter-drone-wraps-contested-operations-test-that-could-accelerate-its-fielding)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
-
-**US Air Force Concludes Critical Exercise with YFQ-44 Fury Drone Prototype**
-
-The US Air Force has concluded a critical exercise with Anduril's YFQ-44 Fury "fighter drone" prototype at Edwards Air Force Base, California. The exercise tested the deployment and sustainment of Collaborative Combat Aircraft (CCAs) in contested environments, using the Warfighting Acquisition System framework to speed up delivery.
-- **[The Complete Guide to Inference Caching in LLMs](https://machinelearningmastery.com/the-complete-guide-to-inference-caching-in-llms/)** - Here is a refined summary of the article "The Complete Guide to Inference Caching in LLMs":
-
-**Introduction**
-
-Inference caching is a technique used to reduce the cost and latency of calling large language models (LLMs) by storing the results of expensive computations and reusing them when equivalent requests arrive. This approach can significantly enhance system efficiency while reducing costs and latency without compromising output quality.
-- **[Anthropic just launched Claude Design, an AI tool that turns prompts into prototypes and challenges Figma | VentureBeat](https://venturebeat.com/technology/anthropic-just-launched-claude-design-an-ai-tool-that-turns-prompts-into-prototypes-and-challenges-figma)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
-
-**Anthropic Launches Claude Design: A Revolutionary AI Tool for Visual Work**
-
-Anthropic has launched Claude Design, an innovative AI tool that enables users to create polished visual work, including designs, interactive prototypes, and marketing collateral, through conversational prompts. This product marks a significant expansion of Anthropic's capabilities beyond its core language model business and into the application layer.
 
