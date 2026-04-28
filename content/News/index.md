@@ -209,10 +209,3 @@ The original article titled *"Anthropic, OpenAI, Google, and Microsoft agree tha
 **Main Points:**  
 - **Sniffnet** is a free, open-source network monitoring tool for Windows 11 and ARM64 devices, gaining popularity with over 401,000 downloads and 33,800 GitHub stars. - Developed by **Giuliano Bellini** (GyulyVGC), it positions itself as a simpler, more intuitive alternative to **Wireshark** and **GlassWire**, emphasizing ease of use and privacy.
 
-### [2026-04-21] Latest Reads
-
-- **[Ambient Notes Extract](https://scratchpad.local/extract)** - **Summary of "Ambient Notes Extract" (JFrog Overview):**  
-
-**Main Points:**  
-1. **JFrog Overview:** JFrog is a DevOps platform provider, best known for its **Artifactory** product, which serves as a universal repository manager for software artifacts.
-
