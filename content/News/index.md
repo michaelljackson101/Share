@@ -12,6 +12,16 @@ This page provides an automated daily roundup of artificial intelligence news, s
 
 ## Latest Digests
 
+### [2026-04-28] Latest Reads
+
+- **[Research: Data Governance - What is this term meaning from a skill and resource responsibilities perspective?](https://google.com/search?q=Data%20Governance%20-%20What%20is%20this%20term%20meaning%20from%20a%20skill%20and%20resource%20responsibilities%20perspective%3F)** - Based on the original article content and the provided refined summary, I will create a new summary that addresses the missing points and enhances completeness, accuracy, and clarity. **Data Governance: Ensuring Data Quality, Security, and Compliance**
+
+Data governance is a critical framework that defines roles, responsibilities, policies, and standards for data management within an organization.
+- **[Research: LATTICE - Anduril Industries’ Lattice is an open, AI-enabled software integration platform designed for public safety, defense, and critical infrastructure protection Anduril. It is sensor, network, and system agnostic, meaning it can integrate data from disparate sensors, feeds, and legacy systems into a single integration layer.](https://google.com/search?q=LATTICE%20-%20Anduril%20Industries%E2%80%99%20Lattice%20is%20an%20open%2C%20AI-enabled%20software%20integration%20platform%20designed%20for%20public%20safety%2C%20defense%2C%20and%20critical%20infrastructure%20protection%20Anduril.%20It%20is%20sensor%2C%20network%2C%20and%20system%20agnostic%2C%20meaning%20it%20can%20integrate%20data%20from%20disparate%20sensors%2C%20feeds%2C%20and%20legacy%20systems%20into%20a%20single%20integration%20layer.)** - **Summary:**  
+Anduril Industries’ **Lattice** is an AI-driven software integration platform designed for **public safety, defense, and critical infrastructure protection**. Key features and insights include:  
+
+1.
+
 ### [2026-04-26] Latest Reads
 
 - **[Research: Can you harvest synthetic personas from social listening martec tools and then monitor particularly for those personas? Are those functionalities usually bundled or they be found in separate tools?](https://google.com/search?q=Can%20you%20harvest%20synthetic%20personas%20from%20social%20listening%20martec%20tools%20and%20then%20monitor%20particularly%20for%20those%20personas%3F%20Are%20those%20functionalities%20usually%20bundled%20or%20they%20be%20found%20in%20separate%20tools%3F)** - **Summary:**  
