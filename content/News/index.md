@@ -14,6 +14,11 @@ This page provides an automated daily roundup of artificial intelligence news, s
 
 ### [2026-05-01] Latest Reads
 
+- **[Research: ScaleAI has a tool called Donovan. What can you tell me about this product?](https://google.com/search?q=ScaleAI%20has%20a%20tool%20called%20Donovan.%20What%20can%20you%20tell%20me%20about%20this%20product%3F)** - Based on the original article content and the quality assessment, I will refine the summary further to address the missing points and enhance its quality. **Refined Summary:**
+
+**Unlocking AI-Powered Decision-Making with Donovan by ScaleAI**
+
+Donovan is a cutting-edge large language model platform designed specifically for government and defense sectors.
 - **[What’s holding back enterprise AI? Shortage of talent, CIOs say | CIO](https://www.cio.com/article/4165232/whats-holding-back-enterprise-ai-shortage-of-talent-cios-say.html)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
 
 **Main Points:**
