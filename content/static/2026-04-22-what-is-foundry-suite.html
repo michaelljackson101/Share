@@ -1,0 +1,774 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>What is Foundry-Suite (v0.3.7)</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%231f4fd8%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2741%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-size%3D%2730%27%20font-weight%3D%27900%27%20fill%3D%27white%27%3EWI%3C/text%3E%3C/svg%3E" />
+    
+    <style>
+      :root {
+        --accent: #1f4fd8;
+        --text: #111827;
+        --muted: #4b5563;
+        --rule: #e5e7eb;
+        --bg: #ffffff;
+        --panel: #f9fafb;
+        --code-bg: #0b1020;
+        --code-fg: #e6edf3;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        margin: 0;
+        padding: 0;
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 42px 28px 54px 28px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        align-items: start;
+        padding-bottom: 18px;
+        border-bottom: 2px solid var(--rule);
+        margin-bottom: 22px;
+      }
+
+      .brand {
+        display: grid;
+        gap: 6px;
+      }
+
+      .brand-title {
+        font-size: 34px;
+        font-weight: 900;
+        line-height: 1.05;
+        color: var(--accent);
+        margin: 0;
+      }
+
+      .brand-tagline {
+        font-size: 15px;
+        font-weight: 650;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .brand-subtitle {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.35;
+        margin: 0;
+      }
+
+      .card {
+        border: 1px solid var(--rule);
+        border-radius: 12px;
+        background: var(--panel);
+        padding: 16px 16px;
+      }
+
+      .card.white {
+        background: #ffffff;
+      }
+
+      h1 {
+        margin: 0 0 10px 0;
+        font-size: 22px;
+        line-height: 1.25;
+      }
+
+      h2 {
+        margin: 0 0 10px 0;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 900;
+        border-top: 3px solid var(--accent);
+        padding-top: 10px;
+      }
+
+      h3 {
+        margin: 14px 0 8px 0;
+        font-size: 14px;
+        font-weight: 900;
+        color: var(--text);
+      }
+
+      p {
+        margin: 0 0 10px 0;
+        font-size: 13.5px;
+        line-height: 1.45;
+        color: var(--text);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+
+      li {
+        margin: 6px 0;
+        font-size: 13.5px;
+        line-height: 1.35;
+        color: var(--text);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 14px 0;
+        font-size: 13px;
+      }
+      th, td {
+        border: 1px solid var(--rule);
+        padding: 10px 10px;
+        vertical-align: top;
+      }
+      th {
+        background: #ffffff;
+        font-weight: 900;
+        text-align: left;
+      }
+
+      pre {
+        background: var(--code-bg);
+        color: var(--code-fg);
+        padding: 12px;
+        overflow-x: auto;
+        border-radius: 10px;
+        border: 1px solid var(--rule);
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 0.95em;
+      }
+      details {
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+        padding: 10px 12px;
+        background: #ffffff;
+        margin: 12px 0;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid var(--rule);
+        margin: 22px 0;
+      }
+      .footer {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      @media print {
+        body {
+          padding: 0;
+        }
+        details {
+          border: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="topbar">
+        <div class="brand">
+          <h1 class="brand-title">What is Foundry-Suite (v0.3.7)</h1>
+          
+          <p class="brand-subtitle">2026-04-22 • mode=branded</p>
+        </div>
+      </div>
+
+      <div class="card white">
+        <h1>What is Foundry-Suite</h1>
+<p>Status: Active / Evolving</p>
+<p>Version: 0.3.7</p>
+<p>Last updated: 2026-04-22</p>
+<p>Change log:</p>
+<ul>
+<li>0.3.7: Added Export-Foundry, Archimate-Foundry, Governance-Foundry, and Reference-Foundry to the ecosystem canon.</li>
+<li>0.3.6: Elevated Document-Foundry and Parser-Foundry roles in the suite narrative and updated lifecycle alignment to reflect their utility across Foundries.</li>
+<li>0.3.5: Documented the Foundry-Suite Overview Streamlit UI and its Canon Browser as a convenient way to browse this repo's canon in a web view.</li>
+<li>0.3.4: Added Hints-Foundry as a knowledge management and pattern library component.</li>
+<li>0.3.3: Introduced graph-native orchestration posture, added Orchestra-Foundry as a planned orchestrator, and completed the TRACE-Loop-Lite rebrand to TRACE-Foundry in suite-level canon.</li>
+<li>0.3.2: Added Imagination-Foundry narrative integration and clarified its role as upstream intake and routing.</li>
+<li>0.3.1: Consolidated visual overview into a single canonical map under canon/architecture.</li>
+<li>0.3.0: Added visual overview diagrams and a lessons learned section.</li>
+<li>0.2.0: Added suite-owned capabilities (LLM Registry MCP, Foundry Monitor) and introduced document versioning.</li>
+<li>0.1.0: Initial canon publication.</li>
+</ul>
+<h2>Executive overview</h2>
+<p>Foundry-Suite is a federated, local-first ecosystem of small, specialized repositories that help a human founder collaborate with AI in an artifact-driven way.</p>
+<p>It is designed around a simple goal:</p>
+<ul>
+<li>reduce cognitive load for planning, communication, curation, and execution</li>
+<li>increase creative bandwidth for exploration and “what could be” thinking</li>
+<li>preserve trust through human-in-the-loop operation and provenance-first workflows</li>
+</ul>
+<p>The core design choice is that AI is treated as a <strong>co-collaborator beside you at the workbench</strong>, not merely a tool on the workbench.</p>
+<h2>Visual overview</h2>
+<p>These diagrams are intentionally lightweight and should stay stable even as the ecosystem evolves.</p>
+<p>Streamlit view (for convenient browsing):</p>
+<ul>
+<li><code>bash ./ui_start.sh</code></li>
+<li>Navigate to <code>Canon Browser</code> to browse <code>canon/</code> (architecture, charter, constitution) plus key root-level docs.</li>
+</ul>
+<p>Canonical map:</p>
+<ul>
+<li><code>canon/architecture/foundry_suite_map.md</code></li>
+</ul>
+<h3>Architecture cartography (generated)</h3>
+<p>The suite also maintains a versioned, auto-generated architecture package under <code>canon/architecture/</code>.</p>
+<ul>
+<li><code>canon/architecture/architecture_narrative.md</code></li>
+<li><code>canon/architecture/legend.md</code></li>
+<li><code>canon/architecture/layout_grid.json</code></li>
+<li><code>canon/architecture/excalidraw_model.json</code></li>
+</ul>
+<h3>Knowledge worker lifecycle and Foundry alignment</h3>
+<pre><code class="language-mermaid">flowchart LR
+  IDE([Idea]) --&gt; INT([Intent]) --&gt; RES([Research TRACE]) --&gt; DES([Design]) --&gt; BLD([Build]) --&gt; EXP([Explain]) --&gt; PUB([Publish]) --&gt; GOV([Govern]) --&gt; LRN([Learn])
+  LRN --&gt; IDE
+
+  IF[Idea-Foundry] --&gt; IDE
+  IMF[Imagination-Foundry] --&gt; IDE
+  INF[Intent-Foundry] --&gt; INT
+  TF[TRACE-Foundry] --&gt; RES
+  OF[Orchestra-Foundry] --&gt; DES
+
+  PF[Prompt-Foundry] --&gt; BLD
+
+  DF[Document-Foundry] --&gt; BLD
+  DF --&gt; PUB
+
+  PR[Parser-Foundry] --&gt; EXP
+
+  SF[Slide-Foundry] --&gt; EXP
+  SF --&gt; PUB
+
+  CF[Comms-Foundry] --&gt; PUB
+  CV[CV-Foundry] --&gt; PUB
+  BF[Brand-Foundry] --&gt; PUB
+
+  FS[[Foundry-Suite]] --&gt; GOV
+  HM[[Hints-MCP]] --&gt; GOV
+  LF[Learning-Foundry] --&gt; LRN
+
+  classDef concept fill:#F4F4F4,stroke:#666666,color:#111111;
+  classDef foundry fill:#E8F5E9,stroke:#2E7D32,color:#111111;
+  classDef support fill:#E3F2FD,stroke:#1565C0,color:#111111;
+
+  class IDE,INT,RES,DES,BLD,EXP,PUB,GOV,LRN concept;
+  class IF,IMF,INF,TF,OF,PF,DF,PR,CF,CV,BF,LF foundry;
+  class FS,HM support;
+</code></pre>
+<h2>What we built in the last two weeks</h2>
+<p>Over roughly two weeks of rapid iteration, the suite matured from a set of experiments into a coherent framework:</p>
+<ul>
+<li>a shared governance anchor (this repository)</li>
+<li>a consistent lifecycle spine (Learning → Idea → Intent → Build → Publish)</li>
+<li>a federated model of cooperating repos (Foundries) and temporary experiments (Labs)</li>
+<li>a practical “contracts over assumptions” approach using MCP tools and structured artifacts</li>
+<li>operational support for discovery, launching, and monitoring of local services</li>
+<li>a suite-owned LLM Registry (MCP) to support cost-effective, task-appropriate model selection</li>
+<li>a suite-owned Foundry Monitor workbench for compliance visibility and operational awareness</li>
+</ul>
+<p>The result is not one product or one app.</p>
+<p>It is a <strong>methodology and working system</strong> for building and operating an AI-augmented knowledge-work practice.</p>
+<h2>The key idea: a craft workshop for knowledge work</h2>
+<p>Think of each Foundry as a workshop that:</p>
+<ul>
+<li>accepts inputs in a predictable form</li>
+<li>produces outputs as named, reviewable artifacts</li>
+<li>can be invoked via explicit tools or repeatable commands</li>
+<li>remains understandable to humans without requiring hidden context</li>
+</ul>
+<p>The suite is intentionally modular and loosely coupled.</p>
+<ul>
+<li>each repo owns its own internal implementation</li>
+<li>cross-repo interactions happen through artifacts and MCP contracts</li>
+<li>everything is meant to be inspectable and explainable</li>
+</ul>
+<h2>What “governance” means here</h2>
+<p>Foundry-Suite is the governance and canonical anchor. It hosts:</p>
+<ul>
+<li>constitution-level principles and shared mental models</li>
+<li>charters that define expectations for suite citizenship</li>
+<li>templates/prompts that help new repos become suite-aware quickly</li>
+<li>registries that support ecosystem discovery</li>
+</ul>
+<p>Detailed implementation patterns (the “how”) live in the centralized Hints-MCP catalog.</p>
+<h2>The operating philosophy</h2>
+<h3>1) Artifact-first over chat-first</h3>
+<p>Chat is valuable for exploration, but durable work requires durable artifacts.</p>
+<p>The suite pushes work into traceable outputs:</p>
+<ul>
+<li>submissions</li>
+<li>specs</li>
+<li>logs</li>
+<li>reports</li>
+<li>published deliverables</li>
+</ul>
+<p>This makes the work:</p>
+<ul>
+<li>reviewable</li>
+<li>auditable</li>
+<li>repeatable</li>
+<li>easy to hand off between repos and agents</li>
+</ul>
+<h3>2) Human-in-the-loop by default</h3>
+<p>The suite treats autonomy as a spectrum.</p>
+<p>A typical pattern is:</p>
+<ul>
+<li>AI proposes</li>
+<li>human approves</li>
+<li>AI executes within clear boundaries</li>
+<li>artifacts are produced with provenance</li>
+</ul>
+<p>This reduces anxiety and distrust by making the system legible.</p>
+<h3>3) Provenance and transparency are non-negotiable</h3>
+<p>The suite prefers:</p>
+<ul>
+<li>explicit inputs and outputs</li>
+<li>named artifacts</li>
+<li>run logs and summaries</li>
+<li>clear records of what changed and why</li>
+</ul>
+<p>When something is uncertain, the system should say so.</p>
+<h3>4) Federation over centralization</h3>
+<p>The suite is deliberately not a monolith.</p>
+<p>Federation enables:</p>
+<ul>
+<li>local autonomy</li>
+<li>parallel evolution of components</li>
+<li>resilience when one component is offline</li>
+<li>safe experimentation without destabilizing the whole</li>
+</ul>
+<h3>5) “AI beside you” as a design target</h3>
+<p>The suite is built to support the lived experience of collaboration:</p>
+<ul>
+<li>you can ask for help drafting, planning, structuring, reviewing, and executing</li>
+<li>the AI can look at the same artifacts you see</li>
+<li>the AI can operate within repeatable pipelines rather than ad-hoc magic</li>
+</ul>
+<p>This is a practical path toward a knowledge-worker setting where human and AI operate side-by-side.</p>
+<h3>6) Graph-native orchestration where it reduces friction</h3>
+<p>Many Foundry workflows are naturally expressed as a graph rather than a strict linear script.</p>
+<p>When it improves reliability and iteration speed, Foundries may implement orchestration as a stateful graph (e.g., using LangGraph) to support:</p>
+<ul>
+<li>loops and retries</li>
+<li>conditional routing between stages</li>
+<li>explicit human-in-the-loop gates</li>
+<li>controlled cross-Foundry handoffs</li>
+</ul>
+<h2>The lifecycle spine</h2>
+<p>The suite uses a consistent maturity model to orient work:</p>
+<ul>
+<li>Learning: acquire capability and context</li>
+<li>Idea: frame opportunities and proposals</li>
+<li>Intent: commit scope and produce execution-ready specifications</li>
+<li>Build: construct assets and systems</li>
+<li>Publish: package outputs for reuse, portfolio, or distribution</li>
+</ul>
+<p>Not all work is linear, but all work fits somewhere on this spine.</p>
+<h2>Component map: current state and aspirational direction</h2>
+<p>This section is intentionally written to be maintainable. It should be updated as capabilities mature.</p>
+<h3>Governance anchor</h3>
+<h4>Foundry-Suite</h4>
+<p>Current:</p>
+<ul>
+<li>defines shared principles and expectations</li>
+<li>provides templates/prompts for suite awareness</li>
+<li>hosts canonical registries for repo and service discovery</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>clearer cross-repo contracts under <code>contracts/</code></li>
+<li>an ecosystem registry MCP server to make discovery/querying a first-class operation</li>
+</ul>
+<h3>Core pipeline Foundries</h3>
+<h4>Learning-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>structured learning backlog and artifact-driven learning runs</li>
+<li>produces notes and capability artifacts that feed downstream work</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>richer run packaging and publish-ready learning outputs</li>
+<li>tighter integration with downstream Foundries via named artifact contracts</li>
+</ul>
+<h4>Imagination-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>captures high-variance inputs (especially transcripts and snippets) as local artifacts</li>
+<li>enriches intake into readable briefs and generates dispatchable work orders for downstream Foundries</li>
+<li>uses HITL gating: work orders are created unaccepted and must be accepted before dispatch</li>
+<li>supports multiple interfaces for the same workflow (MCP tools, CLI, and Streamlit UI)</li>
+<li>optionally exports briefs to an Obsidian reading channel</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>expand the dispatcher path from preview-only to optional execution by invoking downstream MCP tools (guarded by accepted work orders)</li>
+<li>stronger artifact lifecycle management across intake, brief, and work order artifacts</li>
+<li>add test coverage for artifact IO, acceptance toggling, and LLM fallback behavior</li>
+</ul>
+<h4>Idea-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>intake and shaping of opportunities into structured submissions</li>
+<li>bridges raw ideas into handoff-ready packets for downstream execution</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>more standardized intake schemas and automated quality checks</li>
+<li>stronger “idea → intent” handoff automation with explicit gating</li>
+</ul>
+<h4>Intent-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>turns human intent into traceable, execution-ready artifacts and runs</li>
+<li>supports workflow steps and packaging into executive-ready bundles</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>more reusable intent archetypes</li>
+<li>richer validation and policy guardrails</li>
+</ul>
+<h4>Build-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>build-stage execution workspace for constructing deliverables from execution-ready artifacts</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>clearer contracts for “intent → build” handoffs and repeatable build packaging</li>
+</ul>
+<h3>Cross-cutting Foundries</h3>
+<h4>Assessment-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>assessment workflows for turning inputs (e.g., interview or transcript material) into structured evaluation artifacts</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>stronger repeatable rubrics, report packaging, and downstream handoff contracts</li>
+</ul>
+<h4>Orchestra-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>planned orchestration Foundry to formalize cross-Foundry graph execution and handoff governance across the suite</li>
+<li>intended to coordinate iterative loops between Idea-Foundry, Intent-Foundry, Build-Foundry, and other Foundries without turning the suite into a monolith</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>a stable set of orchestration contracts that preserve artifact-first flows and human-in-the-loop gates while enabling safe iteration across Foundries</li>
+</ul>
+<h4>TRACE-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>local-first research pipeline emphasizing evidence, narrative, and explainability</li>
+<li>exports knowledge artifacts for reuse and publishing</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>deeper synthesis and stronger packaging for downstream “publish” consumption</li>
+</ul>
+<h4>Brand-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>advisory posture for narrative, positioning, and polish</li>
+<li>helps maintain coherent voice and messaging without auto-editing by default</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>more structured brand guidance artifacts and checklists</li>
+<li>opt-in automation with strong review gates</li>
+</ul>
+<h4>CV-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>produces tailored career artifacts from canonical sources</li>
+<li>supports publishing into Share/Quartz outputs</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>more generalized “portfolio packaging” for multiple artifact types</li>
+</ul>
+<h4>Comms-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>turns an idea into a canonical Markdown artifact and routes derived outputs</li>
+<li>emphasizes safety guardrails for publishing actions</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>richer distribution policies and repeatable campaign packaging</li>
+</ul>
+<h4>Prompt-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>organizes, validates, and assembles reusable prompts</li>
+<li>supports a UI/workbench model for operating prompt assets</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>stronger test harnesses and prompt provenance workflows</li>
+</ul>
+<h4>Document-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>document engineering workspace for converting, migrating, and packaging legacy artifacts into durable formats</li>
+</ul>
+<p>Elevated role:</p>
+<ul>
+<li>suite compilation engine for turning canonical Markdown/YAML into polished HTML/PDF deliverables</li>
+<li>enables consistent packaging of publish-stage artifacts across Foundries (especially Comms-Foundry and CV-Foundry)</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>more standardized conversion pipelines and quality checks for document outputs</li>
+</ul>
+<h4>Parser-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>parsing and normalization utility for turning legacy fixed-width/unstructured logs into structured JSON using profile-driven parsing</li>
+<li>supports both a Streamlit workbench and an MCP tool surface for reuse across Foundries</li>
+</ul>
+<p>Elevated role:</p>
+<ul>
+<li>shared ingestion adapter for the suite (structured text → records), enabling downstream analysis, assessment, and traceability</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>stronger suite-standard parsing profiles, validations, and reusable schemas for cross-Foundry ingestion</li>
+</ul>
+<h4>Slide-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>deterministic lint/normalize/brand/package pipeline for Reveal.js / Obsidian Advanced Slides Markdown decks</li>
+<li>exposes MCP tools for deck refinement and packaging, producing portable artifacts for teaching and communication</li>
+</ul>
+<p>Elevated role:</p>
+<ul>
+<li>suite-native way to convert canon and workbench artifacts into presentation-grade decks for education, demos, and awareness</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>archetype-aware slide abstraction (prose → diagrams/tables/notes) using LLM + LangGraph with strong viewport protection</li>
+</ul>
+<h4>Hints-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>knowledge management and pattern library component that curates and distributes approved reference patterns across the suite</li>
+<li>provides a centralized librarian function for semantic search and pattern discovery</li>
+<li>maintains the canonical catalog of reusable hints, patterns, and implementation guidance</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>enhanced semantic search and pattern recommendation capabilities</li>
+<li>tighter integration with Foundry workflows for just-in-time pattern delivery</li>
+</ul>
+<h4>Governance-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>generalized framework to spin up evaluation runs and manage compliance dossiers</li>
+<li>acts as a governance and risk assessment engine</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>deeper integration with Build-Foundry to enforce pre-flight compliance checks</li>
+</ul>
+<h4>Archimate-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>operationalizes ArchiMate modeling with bi-directional sync between Archi Open Exchange XML and PostgreSQL</li>
+<li>maintains authoritative attribute stores for enterprise architecture</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>richer impact analysis and architectural validation rules</li>
+</ul>
+<h4>Export-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>formalized pipeline to reliably decouple, sanitize, brand, and package automation scripts into enterprise-safe Windows distributions</li>
+<li>provides extraction engine and UI to serve packaged zips over the local network</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>advanced obfuscation and deterministic credential stripping</li>
+</ul>
+<h4>Reference-Foundry</h4>
+<p>Current:</p>
+<ul>
+<li>planned foundry to build reference models leveraging MarTech-Pipeline, Governance-Foundry, and Archimate-Foundry</li>
+<li>will serve as the integration layer for enterprise reference architectures</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>automated generation of enterprise architecture visual models and capability maps</li>
+</ul>
+<h3>Suite-owned capabilities (incubating under <code>Foundry-Suite/workbench/</code>)</h3>
+<p>These capabilities live under the Foundry-Suite root for practical reasons, but they are positioned as first-class suite infrastructure.</p>
+<h4>LLM Registry</h4>
+<p>Current:</p>
+<ul>
+<li>exposed as an MCP server for advisory “best model for task” routing</li>
+<li>provides a single place to encode which model is most cost-effective and capable for a given task</li>
+<li>enables consistent model selection across Foundries even when a workflow requires multiple LLM calls in a chain</li>
+<li>supports a “non-blocking registry” posture where routing guidance is advisory and workflows can fall back safely</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>richer routing policies that account for task difficulty, token budget, context length, and risk</li>
+<li>better observability: usage summaries, cost signals, and model performance feedback loops</li>
+<li>a shared contract so Foundries can request “best model for task” without coupling to any provider</li>
+</ul>
+<h4>Foundry Monitor</h4>
+<p>Current:</p>
+<ul>
+<li>operational workbench for monitoring, compliance visibility, and suite-level awareness</li>
+<li>acts as a cockpit for identifying drift, gaps, and “what changed” across the ecosystem</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>deeper automated compliance checks and health indicators across repos</li>
+<li>integration with registries (repo + services) and netops for a consolidated operational picture</li>
+</ul>
+<h3>Supporting capability repos</h3>
+<h4>Hints-MCP</h4>
+<p>Current:</p>
+<ul>
+<li>centralized “how-to” library of approved patterns</li>
+<li>semantic search for quick retrieval during builds and audits</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>more formal promotion workflow from workbench notes into approved hints</li>
+</ul>
+<h4>Agentic-MCP</h4>
+<p>Current:</p>
+<ul>
+<li>general-purpose operational tools (email, repo analysis, PDF generation, publishing workflows)</li>
+<li>enables agents to take reliable, repeatable actions</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>expanded safe automation primitives and better audit trails</li>
+</ul>
+<h4>Local-Repos-MCP and ProjectSetup-MCP</h4>
+<p>Current:</p>
+<ul>
+<li>scaffolding and compliance enforcement for new repos</li>
+<li>discovery and launch conventions (e.g., <code>ui_start.sh</code>)</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>standardized birth/orientation pipeline so new repos become suite-aware by default</li>
+</ul>
+<h4>netops-control-plane</h4>
+<p>Current:</p>
+<ul>
+<li>port governance and service orchestration to reduce collisions</li>
+<li>supports a policy of dynamic ports and avoiding hardcoding</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>tighter integration with dashboard launchers and service registries</li>
+</ul>
+<h4>Share</h4>
+<p>Current:</p>
+<ul>
+<li>publishing endpoint for public-ish or shareable artifacts (Quartz)</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>richer publication workflows and feedback loops into the suite</li>
+</ul>
+<h3>Labs and experimental workspaces</h3>
+<h4>TRACE-Loop</h4>
+<p>Current:</p>
+<ul>
+<li>research workspace for TRACE methodology experimentation and learning</li>
+<li>supports iterative development of research patterns and evidence synthesis</li>
+</ul>
+<p>Aspirational:</p>
+<ul>
+<li>deeper integration with TRACE-Foundry for pattern handoff</li>
+<li>enhanced research artifact packaging and reuse</li>
+</ul>
+<h2>Why this is valuable (without overselling)</h2>
+<p>Foundry-Suite is valuable because it makes collaboration with AI safer and more productive in day-to-day knowledge work:</p>
+<ul>
+<li>it reduces the overhead of “figuring out where things go”</li>
+<li>it provides repeatable pipelines instead of ad-hoc chat transcripts</li>
+<li>it makes AI actions inspectable through artifacts and logs</li>
+<li>it increases trust by keeping humans in control of decisions that matter</li>
+</ul>
+<p>It also functions as a learning accelerator for the founder:</p>
+<ul>
+<li>each iteration produces reusable patterns</li>
+<li>the ecosystem becomes more navigable over time</li>
+<li>experimentation is encouraged without sacrificing governance</li>
+</ul>
+<h2>How to engage with the suite</h2>
+<p>If you are inside a repo that claims membership:</p>
+<ul>
+<li>start at <code>FOUNDRY_SUITE_HOME/read-this.md</code></li>
+<li>consult <code>canon/constitution/SUITE.md</code> and the awareness charter</li>
+<li>adopt suite-awareness in your README</li>
+<li>prefer MCP tool calls and artifact handoffs over direct cross-repo edits</li>
+</ul>
+<h2>Lessons learned so far</h2>
+<p>This section is intended to accumulate practical learnings without becoming a long narrative.</p>
+<h3>What worked</h3>
+<ul>
+<li>Keeping governance stable in <code>canon/</code> while allowing fast iteration in <code>workbench/</code>.</li>
+<li>Treating work as artifacts with provenance rather than relying on chat logs.</li>
+<li>Using MCP as a contracts layer to keep repos loosely coupled.</li>
+</ul>
+<h3>What we had to correct</h3>
+<ul>
+<li>Hardcoding ports does not scale; runtime-assigned ports with a policy layer is the safer default.</li>
+<li>Suite awareness needs a machine-readable registry to avoid tribal knowledge.</li>
+</ul>
+<h3>What we are standardizing next</h3>
+<ul>
+<li>A consistent capability report per repo for cockpit-style visibility.</li>
+<li>Lightweight run status exposure so unfinished work can be discovered without opening each UI.</li>
+</ul>
+<h2>Maintenance notes</h2>
+<p>This document is intentionally written to evolve.</p>
+<p>When updating it:</p>
+<ul>
+<li>keep claims grounded in what exists today</li>
+<li>distinguish “current” from “aspirational” explicitly</li>
+<li>favor concrete examples and named artifacts over slogans</li>
+</ul>
+      </div>
+
+      <hr />
+      <div class="footer">
+        <div>Generated by Comms-Foundry — Portable HTML Export.</div>
+        
+      </div>
+    </div>
+  </body>
+</html>
