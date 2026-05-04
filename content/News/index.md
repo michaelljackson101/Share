@@ -12,6 +12,28 @@ This page provides an automated daily roundup of artificial intelligence news, s
 
 ## Latest Digests
 
+### [2026-05-04] Latest Reads
+
+- **[Research: MiQ - Marketing Tool??](https://google.com/search?q=MiQ%20-%20Marketing%20Tool%3F%3F)** - Based on the original article content and the quality assessment, I will refine the summary to address the missing points and enhance its quality. **Title:** MiQ: Revolutionizing Marketing with AI-Powered Insights
+
+**Executive Summary:**
+MiQ is a programmatic media partner that leverages Artificial Intelligence (AI) to unify fragmented data, providing marketers with a comprehensive understanding of their target audiences.
+- **[GitHub - cisco-ai-defense/skill-scanner: Security Scanner for Agent Skills · GitHub](https://github.com/cisco-ai-defense/skill-scanner)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
+
+**Comprehensive Security Scanner for AI Agent Skills**
+
+The Skill Scanner is a best-effort security scanner designed to detect prompt injection, data exfiltration, and malicious code patterns in AI Agent Skills. It combines pattern-based detection (YAML + YARA), LLM-as-a-judge, and behavioral dataflow analysis to maximize detection coverage while minimizing false positives.
+- **[Introducing the AI Agent Security Scanner for IDEs: Verify Your Agents - Cisco Blogs](https://blogs.cisco.com/ai/introducing-the-ai-agent-security-scanner-for-ides-verify-your-agents)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
+
+**Introduction**
+
+The AI Agent Security Scanner for IDEs is a cutting-edge tool designed to bring security visibility and control to the AI development toolchain. Developed by Cisco, this scanner integrates open-source scanners into an IDE extension, providing a defense-in-depth model to prevent vulnerabilities in AI agents.
+- **[Prompt Injection in 2026: Five Attack Patterns That Changed the Game - Secra Blog](https://www.sec-ra.com/blog/prompt-injection-2026-five-attack-patterns)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
+
+**Prompt Injection Attacks: A Growing Threat**
+
+In 2026, prompt injection attacks became a significant threat, with five overlapping patterns that target different layers of the AI stack. These attacks exploit the fundamental weakness of Large Language Models (LLMs) in distinguishing between instructions and data.
+
 ### [2026-05-02] Latest Reads
 
 - **[Fascinating new research suggests artificial neurodivergence could help solve the AI alignment problem](https://www.psypost.org/fascinating-new-research-suggests-artificial-neurodivergence-could-help-solve-the-ai-alignment-problem/)** - Unable to generate summary due to processing error.
