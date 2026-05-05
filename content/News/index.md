@@ -12,6 +12,11 @@ This page provides an automated daily roundup of artificial intelligence news, s
 
 ## Latest Digests
 
+### [2026-05-05] Latest Reads
+
+- **[Omega-3 Supplements Linked to Cognitive Decline in Surprising New Study](https://scitechdaily.com/omega-3-supplements-linked-to-cognitive-decline-in-surprising-new-study/)** - Unable to generate summary due to processing error.
+- **[5 useful things a $5 ESP32 can do for your home network](https://www.makeuseof.com/useful-things-esp32-home-network/)** - Unable to generate summary due to processing error.
+
 ### [2026-05-04] Latest Reads
 
 - **[Research: NIST 853](https://google.com/search?q=NIST%20853)** - Here is a revised summary that addresses the missing points and enhances completeness, accuracy, and clarity:
