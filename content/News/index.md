@@ -12,6 +12,16 @@ This page provides an automated daily roundup of artificial intelligence news, s
 
 ## Latest Digests
 
+### [2026-05-08] Latest Reads
+
+- **[Why Effective Leaders Get Branded as Problems](https://hbr.org/2026/05/why-effective-leaders-get-branded-as-problems)** - Based on the quality assessment, I've refined the summary to address the missing points and enhance completeness, accuracy, and clarity. **Refined Summary:**
+
+**Title:** Why Effective Leaders Get Branded as Problems
+
+**Summary:**
+
+Effective leaders like Anna*, who possess qualities such as decisiveness, confidence, and clarity, often face criticism for their perceived shortcomings.
+
 ### [2026-05-07] Latest Reads
 
 - **[Research: Company called Duetto - news, infrastructure, culture.](https://google.com/search?q=Company%20called%20Duetto%20-%20news%2C%20infrastructure%2C%20culture.)** - Here is a refined summary that addresses the missing points and enhances completeness, accuracy, and clarity:
