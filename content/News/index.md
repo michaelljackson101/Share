@@ -99,8 +99,3 @@ The AI Agent Security Scanner for IDEs is a cutting-edge tool designed to bring 
 
 In 2026, prompt injection attacks became a significant threat, with five overlapping patterns that target different layers of the AI stack. These attacks exploit the fundamental weakness of Large Language Models (LLMs) in distinguishing between instructions and data.
 
-### [2026-05-02] Latest Reads
-
-- **[Fascinating new research suggests artificial neurodivergence could help solve the AI alignment problem](https://www.psypost.org/fascinating-new-research-suggests-artificial-neurodivergence-could-help-solve-the-ai-alignment-problem/)** - Unable to generate summary due to processing error.
-- **[ADHD Isn’t Just a Deficit: Study Reveals Powerful Hidden Strengths](https://scitechdaily.com/adhd-isnt-just-a-deficit-study-reveals-powerful-hidden-strengths/)** - Unable to generate summary due to processing error.
-
