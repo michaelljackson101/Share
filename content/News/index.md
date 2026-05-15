@@ -66,13 +66,3 @@ In today's fast-changing business environment, the traditional approach to strat
 
 Many employees struggle to explain what they do at work due to changes in the way people work. The traditional approach of relying on titles and responsibilities to define one's value is no longer sufficient.
 
-### [2026-05-08] Latest Reads
-
-- **[Why Effective Leaders Get Branded as Problems](https://hbr.org/2026/05/why-effective-leaders-get-branded-as-problems)** - Based on the quality assessment, I've refined the summary to address the missing points and enhance completeness, accuracy, and clarity. **Refined Summary:**
-
-**Title:** Why Effective Leaders Get Branded as Problems
-
-**Summary:**
-
-Effective leaders like Anna*, who possess qualities such as decisiveness, confidence, and clarity, often face criticism for their perceived shortcomings.
-
