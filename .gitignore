@@ -9,4 +9,3 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
-handoff/inbox/manage_nudge_*.yml
