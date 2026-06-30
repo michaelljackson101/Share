@@ -13,5 +13,5 @@ tasks:
 - name: Address compliance issues
   description: |
     Please fix the following compliance issues:
-    - Missing agent workflows folder (.agent/workflows or agent_workflows)
+    - Missing agent workflows folder (.agent/workflows)
   status: todo
