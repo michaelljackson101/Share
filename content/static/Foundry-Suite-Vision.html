@@ -314,13 +314,13 @@
             border-top: 1px solid #E0E0E0;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
             font-size: 8pt;
             color: #666666;
         }
         
         .footer p {
-            margin: 2px 0;
+            margin: 4px 0;
             text-align: left;
         }
         
@@ -337,20 +337,79 @@
             text-decoration: underline;
         }
 
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 6px;
+            align-items: center;
+        }
+
+        .social-icon {
+            width: 14px;
+            height: 14px;
+            fill: #666666;
+            transition: fill 0.2s;
+        }
+
+        .social-links a:hover .social-icon {
+            fill: var(--primary-color);
+        }
+
+        .footer-logo {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 6px;
+        }
+
+        .footer-brand-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
         .toc {
             background: #F9F9F9;
             padding: 20px;
             border-radius: 8px;
             margin: 20px 0;
+            border-left: 3px solid #E0E0E0;
+        }
+
+        .toc details summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .toc details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .toc details summary::before {
+            content: '▶';
+            font-size: 10pt;
+            margin-right: 10px;
+            color: var(--primary-color);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .toc details[open] summary::before {
+            transform: rotate(90deg);
         }
 
         .toc h2 {
             margin-top: 0;
+            margin-bottom: 0;
+            display: inline-block;
         }
 
         .toc ul {
             list-style: none;
             margin-left: 0;
+            margin-top: 15px;
         }
 
         .toc > ul > li {
@@ -362,16 +421,18 @@
         }
 
         .toc li {
-            padding: 2px 0;
+            padding: 5px 0;
             margin-left: 20px;
         }
 
         .toc a {
-            color: var(--primary-color);
+            color: #555555;
             text-decoration: none;
+            transition: color 0.2s;
         }
 
         .toc a:hover {
+            color: var(--primary-color);
             text-decoration: underline;
         }
 
@@ -388,16 +449,20 @@
             .page-break {
                 page-break-before: always;
             }
+            .toc details summary::before {
+                display: none;
+            }
+            .toc details:not([open]) ul {
+                display: block;
+            }
         }
     </style>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><rect width='128' height='128' rx='24' fill='%235B3FD1'/><text x='64' y='76' text-anchor='middle' font-family='Arial, sans-serif' font-weight='800' font-size='64' fill='white'>DF</text></svg>" type="image/svg+xml" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23A100FF' /%3E%3Cstop offset='100%25' stop-color='%233B1D91' /%3E%3C/linearGradient%3E%3Cfilter id='shadow'%3E%3CfeDropShadow dx='0' dy='4' stdDeviation='4' flood-color='%23000000' flood-opacity='0.4'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='128' height='128' rx='28' fill='url(%23bg)'/%3E%3Cg transform='translate(26, 26) scale(2.4)' filter='url(%23shadow)'%3E%3Cpath d='M0 22.6L17.66 16.03L0 9.13V0L30.24 12.18V19.75L0 32V22.6Z' fill='white'/%3E%3C/g%3E%3C/svg%3E" type="image/svg+xml" />
 </head>
 <body>
     <div class="doc-header">
         <div class="logo-container">
-            <svg class="logo-symbol" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 22.6L17.66 16.03L0 9.13V0L30.24 12.18V19.75L0 32V22.6Z" fill="var(--primary-color)"/>
-            </svg>
+            <img src="foundry_logo.png" style="height: 32px;" alt="Foundry Suite">
         </div>
         <div class="header-right">
             <div class="doc-title">Foundry Suite Vision</div>
@@ -407,165 +472,123 @@
     </div>
 
     <div class="toc">
-        <h2>Table of Contents</h2>
-        <ul>
-        <li><a
-        href="#the-foundry-suite-a-vision-for-agentic-federation-and-sovereign-ai-orchestration"
-        id="toc-the-foundry-suite-a-vision-for-agentic-federation-and-sovereign-ai-orchestration">The
-        Foundry Suite: A Vision for Agentic Federation and Sovereign AI
-        Orchestration</a>
-        <ul>
-        <li><a href="#executive-summary"
-        id="toc-executive-summary">Executive Summary</a></li>
-        <li><a href="#1-the-journey-from-fragmentation-to-federation"
-        id="toc-1-the-journey-from-fragmentation-to-federation">1. The
-        Journey: From Fragmentation to Federation</a></li>
-        <li><a href="#2-the-architecture-of-federation-mcp-at-the-core"
-        id="toc-2-the-architecture-of-federation-mcp-at-the-core">2. The
-        Architecture of Federation: MCP at the Core</a></li>
-        <li><a href="#3-zero-trust-and-sovereign-infrastructure"
-        id="toc-3-zero-trust-and-sovereign-infrastructure">3. Zero-Trust
-        and Sovereign Infrastructure</a></li>
-        <li><a href="#4-human-ai-collaboration-the-langgraph-paradigm"
-        id="toc-4-human-ai-collaboration-the-langgraph-paradigm">4.
-        Human-AI Collaboration: The LangGraph Paradigm</a></li>
-        <li><a href="#5-the-aspirational-vision"
-        id="toc-5-the-aspirational-vision">5. The Aspirational
-        Vision</a></li>
-        </ul></li>
-        </ul>
+        <details>
+            <summary><h2>Table of Contents</h2></summary>
+            <ul>
+            <li><a href="#the-foundry-suite-vision"
+            id="toc-the-foundry-suite-vision">The Foundry Suite
+            Vision</a>
+            <ul>
+            <li><a href="#our-simple-goal" id="toc-our-simple-goal">Our
+            Simple Goal</a></li>
+            <li><a href="#how-it-works" id="toc-how-it-works">How It
+            Works</a>
+            <ul>
+            <li><a href="#1-real-work-not-just-chat"
+            id="toc-1-real-work-not-just-chat">1. Real Work, Not Just
+            Chat</a></li>
+            <li><a href="#2-a-team-of-specialists"
+            id="toc-2-a-team-of-specialists">2. A Team of
+            Specialists</a></li>
+            <li><a href="#3-you-are-the-boss-human-in-the-loop"
+            id="toc-3-you-are-the-boss-human-in-the-loop">3. You Are The
+            Boss (Human-in-the-loop)</a></li>
+            <li><a href="#4-complete-privacy-and-security"
+            id="toc-4-complete-privacy-and-security">4. Complete Privacy
+            and Security</a></li>
+            </ul></li>
+            <li><a href="#the-experience-ai-beside-you-at-the-workbench"
+            id="toc-the-experience-ai-beside-you-at-the-workbench">The
+            Experience: AI Beside You at the Workbench</a></li>
+            </ul></li>
+            </ul>
+        </details>
     </div>
 
-<h1
-id="the-foundry-suite-a-vision-for-agentic-federation-and-sovereign-ai-orchestration">The
-Foundry Suite: A Vision for Agentic Federation and Sovereign AI
-Orchestration</h1>
-<p><strong>Author:</strong> Paper-Foundry / Michael L. Jackson<br />
-<strong>Date:</strong> 2026-06-29<br />
-<strong>Version:</strong> v1.0</p>
-<h2 id="executive-summary">Executive Summary</h2>
-<p>The Foundry Suite is not simply a collection of scripts; it is a
-philosophy of computing. It represents a paradigm shift from monolithic,
-fragmented AI toolchains toward a federated, sovereign, and intensely
-collaborative ecosystem. By embracing the Model Context Protocol (MCP)
-and localized, zero-trust infrastructure, the Foundry Suite empowers
-human-in-the-loop (HITL) AI to operate securely and deterministically
-across a matrix of highly specialized "Foundries."</p>
-<p>This paper outlines our journey, the architectural principles
-governing the ecosystem, and the aspirational vision driving its ongoing
-evolution.</p>
-<hr />
-<h2 id="1-the-journey-from-fragmentation-to-federation">1. The Journey:
-From Fragmentation to Federation</h2>
-<p>Our earliest interactions with generative AI were defined by isolated
-chats, fragile prompt chains, and manual copy-pasting. As the complexity
-of our tasks grew, so did the friction. Monolithic "do-everything"
-scripts proved impossible to maintain, and trusting opaque,
-cloud-centric agents with sensitive estate planning or infrastructure
-credentials was a non-starter.</p>
-<p>The Foundry Suite was born out of the necessity to solve this
-fragmentation. Instead of building one massive agent, we constructed an
-ecosystem of discrete, decoupled repositories—the Foundries. Each
-Foundry is engineered to execute one capability flawlessly. For example,
-<code>Tasks-Foundry</code> exclusively governs bi-directional Google
-Tasks syncing and Kanban management, while <code>Network-Foundry</code>
-orchestrates a secure Tailscale VPN mesh and physical
-infrastructure.</p>
-<p>By decentralizing the capabilities, we established a resilient,
-UNIX-like philosophy for the age of agentic AI.</p>
-<hr />
-<h2 id="2-the-architecture-of-federation-mcp-at-the-core">2. The
-Architecture of Federation: MCP at the Core</h2>
-<p>The linchpin of the Foundry Suite's scalability is the <strong>Model
-Context Protocol (MCP)</strong>. MCP acts as the standardized contract
-allowing independent Foundries to communicate seamlessly without rigid,
-hard-coded integrations.</p>
-<p>When an AI agent (such as Antigravity or Windsurf Cascade) needs to
-synthesize a polished HTML document, it doesn't need to know how to
-write CSS or invoke headless Chromium; it simply calls the
-<code>document_foundry_assemble_html</code> tool exposed by the
-<code>Document-Foundry</code> MCP server. When it needs to schedule a
-background daemon, it defers to <code>Schedule-Foundry</code>.</p>
-<p>This federated architecture allows us to rapidly prototype and deploy
-new capabilities—such as the newly integrated <code>Image-Foundry</code>
-or <code>Estate-Foundry</code>—without risking the stability of the core
-system. The ecosystem maps itself dynamically, governed by a central
-registry (<code>suite.yaml</code> and
-<code>foundry_architecture.yaml</code>) that acts as the authoritative
-truth for all cross-foundry orchestration.</p>
-<hr />
-<h2 id="3-zero-trust-and-sovereign-infrastructure">3. Zero-Trust and
-Sovereign Infrastructure</h2>
-<p>In an era where AI agents are granted increasing autonomy, security
-cannot be an afterthought. The Foundry Suite is architected on a
-foundation of absolute sovereignty and zero-trust principles.</p>
-<p>We do not rely on external cloud providers for our most sensitive
-operations. The ecosystem runs on local, sovereign hardware—spanning
-Linux workstation clusters and high-availability Synology NAS
-environments.</p>
+<h1 id="the-foundry-suite-vision">The Foundry Suite Vision</h1>
+<p><strong>Your Personal AI Co-Worker Ecosystem</strong></p>
+<p>The Foundry Suite is a private, secure workspace on your computer
+where you and Artificial Intelligence work together side-by-side.</p>
+<p>Think of it as a collection of specialized digital workshops—which we
+call <strong>Foundries</strong>. Instead of talking to a generic AI
+chatbot, you are collaborating with a team of specialized AI assistants
+to plan, build, and publish your ideas.</p>
+<h2 id="our-simple-goal">Our Simple Goal</h2>
+<ol type="1">
+<li><strong>Reduce the mental load:</strong> Make planning, organizing,
+and executing your work effortless.</li>
+<li><strong>Increase your creative bandwidth:</strong> Free up your time
+so you can focus on creativity, strategy, and "what could be."</li>
+<li><strong>Keep you in control:</strong> The AI acts as your advisor
+and drafter, but you always make the final decisions.</li>
+</ol>
+<h2 id="how-it-works">How It Works</h2>
+<h3 id="1-real-work-not-just-chat">1. Real Work, Not Just Chat</h3>
+<p>Chatting with AI is great for brainstorming, but real work requires
+real outputs. The Foundry Suite is designed to produce tangible results:
+documents, presentations, research reports, and organized task lists. We
+focus on building things you can actually use.</p>
+<h3 id="2-a-team-of-specialists">2. A Team of Specialists</h3>
+<p>Instead of one AI trying to do everything, the Foundry Suite is
+broken down into specialized workshops. For example:</p>
 <ul>
-<li><strong>Secrets-Foundry</strong> mandates strict 1Password CLI
-integration, ensuring credentials are never hardcoded or exposed in
-plaintext.</li>
-<li><strong>Encrypt-Foundry</strong> enforces YubiKey-backed, asymmetric
-<code>age</code> encryption for payloads crossing trust boundaries.</li>
-<li><strong>Archive-Foundry</strong> and <strong>Estate-Foundry</strong>
-ensure that critical data—from backup archives to legal runbooks—remains
-entirely under local governance.</li>
+<li><strong>Idea &amp; Intent Foundries:</strong> Help you brainstorm
+and turn vague ideas into clear, actionable plans.</li>
+<li><strong>Research Foundry:</strong> Acts as your personal researcher,
+gathering facts and creating summaries.</li>
+<li><strong>Document &amp; Slide Foundries:</strong> Take your ideas and
+automatically format them into polished reports and presentations.</li>
+<li><strong>Tasks Foundry:</strong> Keeps your to-do lists organized and
+synced.</li>
 </ul>
-<p>Your data remains yours. The AI operates within the fortified walls
-of your own network.</p>
-<hr />
-<h2 id="4-human-ai-collaboration-the-langgraph-paradigm">4. Human-AI
-Collaboration: The LangGraph Paradigm</h2>
-<p>The Foundry Suite explicitly rejects the narrative of fully
-"unsupervised" AI taking the wheel. Instead, it champions a
-<strong>Human-in-the-Loop (HITL)</strong> methodology.</p>
-<p>Using tools like <code>LangGraph</code>, our workflows are designed
-as explicit state machines. When a Foundry tackles a complex
-workflow—such as drafting this very paper or executing an architectural
-audit—it pauses at critical junctures. It synthesizes the data, presents
-a hypothesis, and explicitly asks the human operator for clarification
-or approval before continuing.</p>
-<p>This is not automation; it is <strong>Agentic
-Pair-Programming</strong>. The AI provides the computational bandwidth,
-extracting facts via <code>Digest-Foundry</code> or building scaffolding
-via <code>Build-Foundry</code>, while the human provides the strategic
-steering and domain expertise.</p>
-<hr />
-<h2 id="5-the-aspirational-vision">5. The Aspirational Vision</h2>
-<p>Our journey is far from complete. As the Foundry Suite matures, our
-focus shifts from simply building new Foundries to orchestrating them at
-a macro level.</p>
-<p>We are striving toward a "Command Center" paradigm, heavily
-leveraging <code>Manage-Foundry</code>, where the health, daemons, and
-cross-foundry handoffs of the entire ecosystem can be audited in
-real-time. We envision fully automated node provisioning across multiple
-geographies, dynamic geographic failover routing managed by
-<code>Network-Foundry</code>, and autonomous self-improvement daemons
-that continually refine the system's own prompts and capabilities.</p>
-<p>The Foundry Suite is a living organism. It is a blueprint for how
-technical founders and engineering leaders can harness the chaos of
-modern AI, bending it into a structured, secure, and infinitely capable
-machine.</p>
+<h3 id="3-you-are-the-boss-human-in-the-loop">3. You Are The Boss
+(Human-in-the-loop)</h3>
+<p>We believe AI should work <em>with</em> you, not <em>for</em> you in
+the dark. In the Foundry Suite, the AI will propose a plan or draft a
+document, but it waits for your approval before finalizing anything.
+This ensures you always know what is happening and your work retains
+your personal touch.</p>
+<h3 id="4-complete-privacy-and-security">4. Complete Privacy and
+Security</h3>
+<p>The Foundry Suite is "local-first." This means it runs securely on
+your own hardware. Your data, your ideas, and your documents stay
+entirely under your control.</p>
+<h2 id="the-experience-ai-beside-you-at-the-workbench">The Experience:
+AI Beside You at the Workbench</h2>
+<p>Imagine sitting down at your workbench. Instead of staring at a blank
+page, you have an expert co-worker sitting next to you.</p>
+<p>You share your idea. Your AI co-worker helps you organize it into a
+project plan. Another AI specialist drafts the initial document. A third
+helps you polish it into a presentation. You review their work, make
+adjustments, and give the final approval.</p>
+<p>That is the Foundry Suite: a craft workshop for modern knowledge
+work, empowering you to do your best work, faster and with less
+stress.</p>
 
     <div class="footer">
         <div class="footer-left">
             <p style="font-weight: 600; color: #323232;">Michael L. Jackson</p>
-            <p>
-                <a href="https://michaelljackson101.github.io/Share/index.html">Website</a> &bull; 
-                <a href="https://github.com/michaelljackson101">GitHub</a> &bull; 
-                <a href="https://www.linkedin.com/in/michaelljackson/">LinkedIn</a>
-            </p>
             <p style="font-style: italic;">Building systems that think.</p>
+            <div class="social-links">
+                <a href="https://michaelljackson101.github.io/Share/index.html" aria-label="Website">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                </a>
+                <a href="https://github.com/michaelljackson101" aria-label="GitHub">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/michaelljackson/" aria-label="LinkedIn">
+                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </a>
+            </div>
         </div>
-        <div class="footer-right">
+        <div class="footer-right footer-brand-container">
+            <img src="foundry_logo.png" style="height: 32px;" alt="Foundry Suite">
             <p>
                 
-                <span style="font-weight: 600;">Document-Foundry</span> v0.1.1-beta
+                <span style="font-weight: 600;">Document-Foundry</span> v0.1.2-beta
             </p>
-            <p>Generated: 2026-06-29</p>
-            <p style="font-family: monospace;">Rev: 732a7275a1</p>
+            <p>Generated: 2026-07-03</p>
+            <p style="font-family: monospace;">Rev: c5e896a556</p>
         </div>
     </div>
 
