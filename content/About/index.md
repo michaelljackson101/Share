@@ -16,7 +16,7 @@ If you’d like to connect, email me at Michael.Jackson@POBox.com.
 
 I’m an engineer‑turned‑architect and technology consultant who helps teams turn strategy into working systems—connecting platforms, data, and processes with clear decision frameworks. I value simple, reliable solutions that scale.
 
-Lately, I’ve focused on secure‑by‑design MarTech, data governance, and AI‑ready patterns that improve speed to value while respecting constraints and privacy.
+Lately, I’ve focused on building autonomous SDLC orchestration pipelines using LangGraph and the Foundry Suite—engineering multi-agent ecosystems that accelerate speed-to-value from raw ideation to governed repository scaffolding.
 
 
 
