@@ -1,7 +1,6 @@
 ---
 title: Michael Jackson’s Garden 🌱
 draft: false
-tags:
 ---
  
 Welcome to my digital garden, established in Jan 2026.
