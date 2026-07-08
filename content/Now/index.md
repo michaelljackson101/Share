@@ -60,7 +60,9 @@ This page is a short snapshot of what I’m focusing on right now.
 
 ## Active Developments (Automated Pulse)
 
-*Last updated: 2026-07-07*
+*Last updated: 2026-07-08*
 
-- Ongoing architecture refinements, pipeline automation, and infrastructural scaling.
+- Repository Build-Foundry: Implemented cryptographic secure handoff protocol, updated pipeline guardrails, and enforced strict preflight validation for build_spec.yml boundary.
+- Repository LLM-Registry: Implemented federated autonomous LangChain facade, compliance nudges, and dynamic resolver with gemini as primary frontier model.
+- Repository Tax-Foundry: Completed Phase 1 scaffolding, db schema, pydantic models, and privacy utils.
 
