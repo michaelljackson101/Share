@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>John Doe — 1-Pager</title>
+  <title>Michael Jackson — 1-Pager</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0%200%20128%20128'><rect width='128' height='128' rx='24' fill='%23A100FF'/><text x='64' y='76' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='64' fill='white'>MJ</text></svg>" type="image/svg+xml" />
   <style>
     @page { size: 16in 9in; margin: 0.45in; }
 
     :root {
       --accent: #A100FF;
-      --text: #0f172a;
-      --muted: #475569;
-      --rule: #e2e8f0;
+      --text: #111827;
+      --muted: #4b5563;
+      --rule: #e5e7eb;
     }
 
     body {
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, Liberation Sans, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
       margin: 0;
     }
@@ -42,6 +43,14 @@
       grid-template-columns: 1fr auto;
       align-items: end;
       gap: 0.6rem;
+    }
+
+    .header-logo {
+      height: 26px;
+      width: auto;
+      opacity: 1;
+      object-fit: contain;
+      align-self: start;
     }
 
     .name {
@@ -80,6 +89,11 @@
     .top {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
+      gap: 0.7rem;
+    }
+
+    .right-col {
+      display: grid;
       gap: 0.7rem;
     }
 
@@ -253,27 +267,35 @@
   <div class="header">
     <div class="header-left">
       <div>
-        <div class="name">John Doe</div>
-        <div class="headline">AI/LLM Delivery &amp; Governance Leader</div>
+        <div class="name">Michael Jackson</div>
+        <div class="headline">AI LLM Technology Architecture — Associate Director</div>
       </div>
+      
+      <img class="header-logo" src="images/accenture_logo_sm.png" alt="" />
+      
     </div>
     <div class="meta">
-      <div>Boston, MA</div>
-      <div><a href="mailto:john.doe@example.com">john.doe@example.com</a></div>
-      <div><a href="tel:+1 (555) 010-0200">+1 (555) 010-0200</a></div>
+      <div>Greater Boston, MA</div>
+      <div><a href="mailto:michael.l.jackson@afs.com">michael.l.jackson@afs.com</a></div>
+      <div><a href="tel:+1 617-286-2684">+1 617-286-2684</a></div>
+      <div>Federal AI Transformation & Governance Leader</div>
     </div>
   </div>
 
   <div class="top">
     <div class="card accented">
       <h3>Executive Summary</h3>
-      
-      <div class="summary">
-          
-          Delivery leader focused on turning AI/LLM capability into auditable, repeatable outcomes through governance, operating models, and disciplined execution.
-          
-      </div>
-      
+      <div class="summary">Associate Director focused on AI/LLM technology architecture and enterprise adoption—bringing governance, operating model design, and delivery execution together to turn generative AI into an auditable, repeatable capability. Led AI strategy and automation initiatives for a major DoD program, including an AI strategic plan aligned to NIST AI RMF, TRACE methodology for governed AI-assisted content production, and a TILETS enablement model that achieved >60% workforce AI literacy. Known for translating emerging AI capabilities into secure, practical workflows that improve delivery speed and communication quality.
+</div>
+      <ul>
+        
+        <li>Led AI strategy and governed adoption for mission-critical public-sector programs; delivered measurable productivity gains</li>
+        
+        <li>Designed human-in-the-loop AI operating models aligned to NIST AI RMF, auditability, and delivery execution</li>
+        
+        <li>Built self-hosted and cloud LLM capabilities with usage telemetry and cost governance; deployed Postgres vector and observability foundations for embeddings and analytics</li>
+        
+      </ul>
 
       <div style="height: 0.45rem;"></div>
 
@@ -281,72 +303,72 @@
       <div class="strengths">
         
         <div>
-          <div class="bucket-title">AI/ML</div>
-          <div class="bucket-items">LLM workflow design, Prompting &amp; evaluation, Human-in-the-loop patterns, Model risk awareness, NIST AI RMF literacy</div>
+          <div class="bucket-title">AI/LLM</div>
+          <div class="bucket-items">AI Program Governance, AI Operating Model Design, AI Risk And Compliance, Human In The Loop Systems</div>
         </div>
         
         <div>
-          <div class="bucket-title">Product</div>
-          <div class="bucket-items">Narrative writing, Decision-grade synthesis, Stakeholder alignment, Metrics, Executive packaging</div>
+          <div class="bucket-title">Delivery</div>
+          <div class="bucket-items">Complex Program Delivery, Governance And Controls, Vendor Management, Metrics And Outcomes Management</div>
         </div>
         
         <div>
-          <div class="bucket-title">Engineering</div>
-          <div class="bucket-items">Python, YAML-first authoring, Jinja templating, CLI tooling, Git workflows, Markdown-first artifacts</div>
+          <div class="bucket-title">Domains</div>
+          <div class="bucket-items">Defense, Public Sector, Healthcare Payer, Contact Center</div>
         </div>
         
         <div>
-          <div class="bucket-title">Leadership</div>
-          <div class="bucket-items">Program governance, Operating model design, Change enablement, Delivery discipline, Risk/compliance communication</div>
+          <div class="bucket-title">Tools</div>
+          <div class="bucket-items">Windsurf, Model Context Protocol, LLM Prompting, LLMOps, Postgres, Vector Storage, Observability, Jira</div>
         </div>
         
       </div>
     </div>
 
-    <!-- Mapping 'Projects' to 'Signature Proof' -->
-    <div class="card accented">
-      <h3>Signature Proof (Projects)</h3>
-      <table class="wins">
-        <tbody>
-          
-          <tr>
-            <td>
-              <div class="win-title">CVFoundry-Lite</div>
-              
-              <div class="win-impact">Built a self-contained resume generator from canonical YAML + config YAML using Python + Jinja, optimized for portability (single HTML file).</div>
-              
-            </td>
-          </tr>
-          
-          <tr>
-            <td>
-              <div class="win-title">CVFoundry (Concept)</div>
-              
-              <div class="win-impact">Developed a pragmatic approach to “CV as code”: structured data + templates + deterministic builds instead of manual Word/PDF version sprawl.</div>
-              
-            </td>
-          </tr>
-          
-          <tr>
-            <td>
-              <div class="win-title">KOS / TRACE (Concept)</div>
-              
-              <div class="win-impact">Explored a tool-neutral control-plane for Human–AI co-collaboration where thinking becomes durable artifacts.</div>
-              
-            </td>
-          </tr>
-          
-          <tr>
-            <td>
-              <div class="win-title">ResDoc Template + Shared Engines</div>
-              
-              <div class="win-impact">Created a Markdown-first, Git-friendly scaffold for AI-assisted research and decision-support deliverables (TRACE loop + TILETS staging).</div>
-              
-            </td>
-          </tr>
-          
-        </tbody>
-      </table>
+    <div class="right-col">
+      
+      <div class="card accented">
+        <h3>AI Learning &amp; Enablement</h3>
+        <div class="summary">Alongside client delivery, I invest heavily in a self-directed AI learning and prototyping track, building a small 'Foundry Suite' of reusable workflows for traceable, human-in-the-loop AI-assisted work. I also actively coach and equip colleagues to adopt these techniques responsibly, helping scale AI capability, confidence, and governance across teams.</div>
+      </div>
+      
+
+      <div class="card accented">
+        <h3>Signature Proof</h3>
+        <table class="wins">
+          <tbody>
+            
+            <tr>
+              <td>
+                <div class="win-title">Authored 'AI Strategic Readiness and Agentic Governance' Thought Paper</div>
+                <div class="win-impact">Authored a strategic thought paper for firm leadership on advising clients through the transition to autonomous, agentic AI workforces</div>
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                <div class="win-title">Established Enterprise AI SharePoint Blog and Prompt Catalog</div>
+                <div class="win-impact">Developed an internal SharePoint blog reaching 200+ practitioners with weekly AI insights, research, and automation tips</div>
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                <div class="win-title">Accelerated AI Adoption for USAF ICAM Program</div>
+                <div class="win-impact">Integrated as an AI consultant to accelerate AI adoption and establish best practices within existing program constraints</div>
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                <div class="win-title">Served as Talent Acquisition Ambassador for Firm Growth</div>
+                <div class="win-impact">Participated heavily in recruitment, conducting interviews to assess technical and cultural fit</div>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
@@ -362,7 +384,7 @@
       <thead>
         <tr>
           <th>Role</th>
-          <th>Company</th>
+          <th>Client / Context</th>
           <th>Dates</th>
           <th>Impact</th>
         </tr>
@@ -371,47 +393,101 @@
         
         <tr>
           <td>
-            <div class="role">AI Transformation &amp; Governance Lead</div>
+            <div class="role">Senior MarTech Strategy & Architecture Lead — Accenture</div>
           </td>
           <td class="client">
-            Global Consulting Firm
+            Accenture Federal Services - Marketing Technology
           </td>
-          <td class="dates">Oct 2025–Present</td>
-          <td class="impact">
-            
-            Authored an AI strategic plan with a Crawl–Walk–Run maturity model aligned to NIST AI RMF and practical delivery constraints.
-            
-          </td>
+          <td class="dates">Mar 26–Present</td>
+          <td class="impact" title="Serve as senior technical authority defining enterprise MarTech strategy and architecture for AFS Marketing in partnership with Accenture Song">Serve as senior technical authority defining enterprise MarTech strategy and architecture for AFS Marketing in partnership with Accenture Song</td>
         </tr>
         
         <tr>
           <td>
-            <div class="role">Builder — AI Tooling &amp; Intent-to-Artifact Workflows</div>
+            <div class="role">AI and Innovation Lead — Accenture</div>
           </td>
           <td class="client">
-            Self-Directed (Open Work)
+            U.S. Air Force Human Capital Modernization Program
           </td>
-          <td class="dates">Oct 2025–Present</td>
-          <td class="impact">
-            
-            Operationalized a multi-tenant AI Governance Pipeline with semantic web crawling and robust PDF/HTML parsing for compliant AI sourcing.
-            
-          </td>
+          <td class="dates">Oct 25–Feb 26</td>
+          <td class="impact" title="Authored AI Strategic Plan (&#34;Sharpen the Axe&#34;) with a Crawl–Walk–Run maturity model aligned to NIST AI RMF">Authored AI Strategic Plan ("Sharpen the Axe") with a Crawl–Walk–Run maturity model aligned to NIST AI RMF</td>
         </tr>
         
         <tr>
           <td>
-            <div class="role">Senior Product Manager</div>
+            <div class="role">Strategic AI Advisor — Accenture</div>
           </td>
           <td class="client">
-            Acme Software
+            U.S. Air Force Maintenance, Repair, and Overhaul Initiative
           </td>
-          <td class="dates">Jan 2019–May 2022</td>
-          <td class="impact">
-            
-            Owned roadmap for a workflow automation platform; grew active users 3x and improved retention by 18%.
-            
+          <td class="dates">Feb 26–Present</td>
+          <td class="impact" title="Advise client leadership on incorporating AI into an Oracle EBS-based application modernization roadmap">Advise client leadership on incorporating AI into an Oracle EBS-based application modernization roadmap</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">AI Consultant — Accenture</div>
           </td>
+          <td class="client">
+            U.S. Air Force Identity, Credential, and Access Management Program
+          </td>
+          <td class="dates">Jan 26–Mar 26</td>
+          <td class="impact" title="Provided targeted AI advisory support to accelerate AI adoption and establish best practices within existing program constraints">Provided targeted AI advisory support to accelerate AI adoption and establish best practices within existing program constraints</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">Business Development & Proposal Support (Parallel Track) — Accenture</div>
+          </td>
+          <td class="client">
+            Internal (Business Development)
+          </td>
+          <td class="dates">Oct 25–Present</td>
+          <td class="impact" title="Support AI-enabled proposals by shaping solution approach, delivery model, and responsible AI considerations">Support AI-enabled proposals by shaping solution approach, delivery model, and responsible AI considerations</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">AI Learning & Experimentation (Parallel Track) — Accenture</div>
+          </td>
+          <td class="client">
+            Self-Directed AI Learning and Experimentation
+          </td>
+          <td class="dates">Oct 25–Present</td>
+          <td class="impact" title="Operationalized a multi-tenant AI Governance Pipeline with semantic web crawling and robust PDF/HTML parsing for compliant AI sourcing">Operationalized a multi-tenant AI Governance Pipeline with semantic web crawling and robust PDF/HTML parsing for compliant AI sourcing</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">AI Culture, Mentorship & Firm Building (Parallel Track) — Accenture</div>
+          </td>
+          <td class="client">
+            Internal (Accenture)
+          </td>
+          <td class="dates">Oct 25–Present</td>
+          <td class="impact" title="Mentored 40-50 practitioners on AI adoption, leveraging 35+ years of experience to inspire and guide the next generation of the workforce">Mentored 40-50 practitioners on AI adoption, leveraging 35+ years of experience to inspire and guide the next generation of the workforce</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">AI Practitioner (Internal Assignment) — Accenture</div>
+          </td>
+          <td class="client">
+            Internal (Accenture)
+          </td>
+          <td class="dates">Jun 25–Sep 25</td>
+          <td class="impact" title="Completed AI Practitioner upskilling and earned Accenture Certified Delivery Professional (CDP) certification">Completed AI Practitioner upskilling and earned Accenture Certified Delivery Professional (CDP) certification</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="role">Program Delivery Lead — Accenture</div>
+          </td>
+          <td class="client">
+            State Human Services Agency
+          </td>
+          <td class="dates">Oct 22–May 25</td>
+          <td class="impact" title="Owned project management controls and tooling, maintaining detailed plans, estimates, and progress tracking to enable effective leadership oversight">Owned project management controls and tooling, maintaining detailed plans, estimates, and progress tracking to enable effective leadership oversight</td>
         </tr>
         
       </tbody>
@@ -423,7 +499,9 @@
       <div class="label">Education</div>
       <div class="value">
         
-        <div>State University — B.S., Computer Science</div>
+        <div>United States Military Academy at West Point — B.S., Engineering, Computer Science</div>
+        
+        <div>Bowie State University (University of Maryland European Division) — M.S., Management Information Systems</div>
         
       </div>
     </div>
@@ -431,30 +509,26 @@
       <div class="label">Certifications</div>
       <div class="value">
         
-        <div>Certified Delivery Professional — Professional Services Training (2025)</div>
-        
-        <div>Cloud Architecture (Associate) — Cloud Provider (2021)</div>
+        <div>Certified Delivery Professional — Accenture (2025)</div>
         
       </div>
     </div>
     <div>
-      <div class="label">Interests</div>
+      <div class="label">Selected Training</div>
       <div class="value">
         
-        <div>Writing</div>
+        <div>Reinvention with Agentic AI (4 items) (Mar 26)</div>
         
-        <div>Teaching</div>
+        <div>Accelerating AI Mastery: Role-Based DeepLearning.AI Certifications (Nov 25)</div>
         
-        <div>Systems thinking</div>
-        
-        <div>AI literacy enablement</div>
+        <div>Build Application using GitHub Copilot (Recommended for Custom Engineers) (Nov 25)</div>
         
       </div>
     </div>
   </div>
 </div>
 
-<div class="build-footer"> v —  (rev )</div>
+<div class="build-footer"><a href="https://michaelljackson101.github.io/Share/static/CVFoundry.html">CV-Foundry</a> v0.1.6 — 2026-07-13 (rev 5fe9593834)</div>
 
 </body>
 </html>
