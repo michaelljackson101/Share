@@ -12,8 +12,5 @@ This page provides an automated daily roundup of artificial intelligence news, s
 
 ## Latest Digests
 
-### [2026-07-08] Latest Reads
-
-- **[Ambient Notes Extract](https://scratchpad.local/extract)** - To post public signature key on GitHub static pages, research is needed to understand the difference between signature keys and encryption keys, as well as how people effectively manage their keys and posting public keys where needed. **Trace-Foundry Extracted Entities & Actions:**
-- None extracted.
+No recent reads found in the last 7 days.
 
