@@ -1,13 +1,24 @@
 ---
 id: share-quartz-digital-garden
 name: Share
-description: Quartz v4-based digital garden site with publishable Markdown content in content/ and direct-link static assets in content/static/.
+description: Quartz v4-based digital garden site with publishable Markdown content
+  in content/ and direct-link static assets in content/static/.
 owner: Michael Jackson
 status: active
 kind: quartz_site
 created: 2026-02-03
-tags: [quartz, digital-garden, publishing, github-pages]
-consumers: ["agentic-audit"]
+tags:
+- quartz
+- digital-garden
+- publishing
+- github-pages
+consumers:
+- agentic-audit
+moniker: The Share
+tagline: Quartz v4-based digital garden site with publishable Markdown content in
+  content/ and direct-link static assets in content/static/.
+tier: Publishing & Delivery
+key_capabilities: []
 ---
 
 # Quartz v4
