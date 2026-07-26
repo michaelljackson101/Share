@@ -12,6 +12,14 @@ This page provides an automated daily roundup of artificial intelligence news, s
 
 ## Latest Digests
 
+### [2026-07-26] Latest Reads
+
+- **[5 command-line apps I install on every new Linux PC](https://www.howtogeek.com/every-linux-user-has-their-must-have-cli-tools-these-are-mine-and-they-might-suprise-you/)** - Here is a refined summary of the article:
+
+**Main Points:**
+
+The author shares their list of favorite command-line apps for every new Linux PC, highlighting tools for writing, communication, coding, and productivity. The five essential command-line apps mentioned are GNU Style and Diction, Weechat, Git, tmux, and Pixi.
+
 ### [2026-07-25] Latest Reads
 
 - **[Visual Studio Code 1.130 improves Agents window | InfoWorld](https://www.infoworld.com/article/4200970/visual-studio-code-1-130-improves-agents-window.html)** - **Visual Studio Code 1. 130 Update Improves Agents Window and Agent Host**
