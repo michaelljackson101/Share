@@ -1,0 +1,26 @@
+work_order_id: "WO_20261101_SHARE_LOCAL_QUARTZ_BUILD_PIPELINE"
+title: "Integrate Local Sovereign Web Root Sync into Quartz Digital Garden Publishing Workflow"
+date: "2026-11-01"
+source_foundry: "Executive / Antigravity"
+target_foundry: "Share"
+status: "SUBMITTED"
+priority: "NORMAL"
+target_node: "Local Workstation / Home Core"
+
+summary: >
+  Enhance the Quartz publishing workflow in the Share repository (scripts/ or quartz-sync.sh)
+  to optionally synchronize the compiled static output (public/) directly to the local sovereign
+  web root (/var/www/sunnyporchswing/ or /var/www/sunnyporchswing/garden/) in addition to GitHub Pages.
+  This unlocks instant local-to-edge publication under https://sunnyporchswing.com.
+
+directives:
+  - task: "Publishing Script Enhancement"
+    details: >
+      Update quartz-sync.sh and PUBLISHING.md to add a local deploy target copying public/
+      to the designated web root.
+  - task: "Relative Link & Base URL Audit"
+    details: >
+      Audit quartz.config.ts baseUrl configuration to verify support for both sunnyporchswing.com
+      and existing GitHub Pages fallback.
+
+handoff_reference: "WARNORD-20261101-151000-DURABLE-WEB-INGRESS-ALIGNMENT"
