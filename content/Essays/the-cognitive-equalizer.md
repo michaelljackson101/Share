@@ -205,3 +205,4 @@ Every single day, extraordinary human insights die unspoken behind ordinary comm
 7. **Pew Research Center** (2025–2026 Public Attitudes Toward Artificial Intelligence Surveys, including August 18, 2026 release): https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/
 8. **U.S. Bureau of Labor Statistics (BLS)** — *American Time Use Survey (ATUS): Time Spent in Leisure and Sports*: https://www.bls.gov/opub/ted/2025/time-spent-in-leisure-and-sports-in-2024.htm
 9. **Companion Blueprint in This Garden**: [[Essays/liberating-trapped-brilliance|Liberating Trapped Brilliance: Ending the Charisma Tax in Enterprise Decisions Through Canonical Thought Tempering and Receptor-Adapted AI]].
+
